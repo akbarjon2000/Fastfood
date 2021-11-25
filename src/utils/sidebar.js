@@ -1,4 +1,5 @@
 import Generic from "../pages/Generic"
+import OrdersNav from "../components/orders/OrderNav"
 import { ReactComponent as order } from "../assets/icon/check-circle.svg"
 import { ReactComponent as archive } from "../assets/icon/archive.svg"
 import { ReactComponent as category } from "../assets/icon/layers.svg"
@@ -19,7 +20,7 @@ export const sidebar = [
         title: "Orders",
         pathname: "/Orders",
         child: [],
-        component: Generic,
+        component: OrdersNav,
         hidden: false,
         icon: order,
     },

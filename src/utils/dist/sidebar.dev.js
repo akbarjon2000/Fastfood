@@ -7,6 +7,8 @@ exports.sidebar = void 0;
 
 var _Generic = _interopRequireDefault(require("../pages/Generic"));
 
+var _OrderNav = _interopRequireDefault(require("../components/orders/OrderNav"));
+
 var _checkCircle = require("../assets/icon/check-circle.svg");
 
 var _archive = require("../assets/icon/archive.svg");
@@ -26,7 +28,7 @@ var sidebar = [{
   title: "Orders",
   pathname: "/Orders",
   child: [],
-  component: _Generic["default"],
+  component: _OrderNav["default"],
   hidden: false,
   icon: _checkCircle.ReactComponent
 }, {

@@ -3,23 +3,28 @@ import { Container, Wrapper } from './style';
 import { BrowserRouter as Router, NavLink, Routes, Route, } from "react-router-dom"
 import { sidebar } from "../utils/sidebar"
 import Sidebar from '../components/Sidebar';
-import Products from '../components/products/Products';
+import OrdersNav from '../components/orders/OrderNav';
+
+//Contexts:
+import { OrdersContex } from '../context/OrdersContex';
 
 export const Root = () => {
     return (
         <Container>
             <Router>
-                <Sidebar />
-                <Wrapper>
-                    <Routes>
-                        {
-                            sidebar.map(({ id, pathname, component: Element, title }) => (
-                                <Route key={id} path={pathname} element={<Element />} />
-                            ))
-                        }
-                        <Route path="*" element={<h1>404 Not Found</h1>} />
-                    </Routes>
-                </Wrapper>
+                <OrdersContex>
+                    <Sidebar />
+                    <Wrapper>
+                        <Routes>
+                            {
+                                sidebar.map(({ id, pathname, component: Element, title }) => (
+                                    <Route key={id} path={pathname} element={<Element />} />
+                                ))
+                            }
+                            <Route path="*" element={<h1>404 Not Found</h1>} />
+                        </Routes>
+                    </Wrapper>
+                </OrdersContex>
             </Router>
         </Container>
     )
