@@ -2,7 +2,7 @@ export const orders = {
     new: [{
         id: 1,
         orderNum: 8549,
-        time: new Date(),
+        time: Date.now(),
         customer: "Muhammad Ali",
         phoneNum: "+8201091519002",
         cost: "35,400 KRW",
@@ -15,7 +15,7 @@ export const orders = {
     {
         id: 2,
         orderNum: 8534,
-        time: new Date(),
+        time: Date.now(),
         customer: "Deveeprasad Acharya",
         phoneNum: "+8201091519002",
         cost: "35,400 KRW",
@@ -27,7 +27,7 @@ export const orders = {
     }, {
         id: 3,
         orderNum: 8522,
-        time: new Date(),
+        time: Date.now(),
         customer: "Thoma Fulloway",
         phoneNum: "+8201091519002",
         cost: "35,400 KRW",
@@ -39,7 +39,7 @@ export const orders = {
     }, {
         id: 4,
         orderNum: 8512,
-        time: new Date(),
+        time: Date.now(),
         customer: "Jaquelin Likoki",
         phoneNum: "+8201091519002",
         cost: "35,400 KRW",
@@ -53,7 +53,7 @@ export const orders = {
         {
             id: 1,
             orderNum: 8512,
-            time: new Date(),
+            time: Date.now(),
             customer: "Jaquelin Likoki",
             phoneNum: "+8201091519002",
             cost: "35,400 KRW",
@@ -68,7 +68,7 @@ export const orders = {
         {
             id: 4,
             orderNum: 8512,
-            time: new Date(),
+            time: Date.now(),
             customer: "Jaquelin Likoki",
             phoneNum: "+8201091519002",
             cost: "35,400 KRW",
@@ -80,7 +80,7 @@ export const orders = {
         }, {
             id: 4,
             orderNum: 8512,
-            time: new Date(),
+            time: Date.now(),
             customer: "Jaquelin Likoki",
             phoneNum: "+8201091519002",
             cost: "35,400 KRW",
@@ -95,7 +95,7 @@ export const orders = {
         {
             id: 4,
             orderNum: 8512,
-            time: new Date(),
+            time: Date.now(),
             customer: "Jaquelin Likoki",
             phoneNum: "+8201091519002",
             cost: "35,400 KRW",
@@ -107,7 +107,7 @@ export const orders = {
         }, {
             id: 4,
             orderNum: 8512,
-            time: new Date(),
+            time: Date.now(),
             customer: "Jaquelin Likoki",
             phoneNum: "+8201091519002",
             cost: "35,400 KRW",

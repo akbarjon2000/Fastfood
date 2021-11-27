@@ -5,10 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.sidebar = void 0;
 
-var _Generic = _interopRequireDefault(require("../pages/Generic"));
-
-var _OrderNav = _interopRequireDefault(require("../components/orders/OrderNav"));
-
 var _checkCircle = require("../assets/icon/check-circle.svg");
 
 var _archive = require("../assets/icon/archive.svg");
@@ -21,14 +17,19 @@ var _users = require("../assets/icon/users.svg");
 
 var _barChart = require("../assets/icon/bar-chart-2.svg");
 
+var _Generic = _interopRequireDefault(require("../pages/Generic"));
+
+var _Orders = _interopRequireDefault(require("../components/orders/Orders"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+//IMAGES:
 var sidebar = [{
   id: 1,
   title: "Orders",
   pathname: "/Orders",
   child: [],
-  component: _OrderNav["default"],
+  component: _Orders["default"],
   hidden: false,
   icon: _checkCircle.ReactComponent
 }, {

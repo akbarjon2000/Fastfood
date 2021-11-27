@@ -10,7 +10,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\ndisplay:flex;\n"]);
+  var data = _taggedTemplateLiteral(["\ndisplay:flex;\nflex-direction:row;\n"]);
 
   _templateObject = function _templateObject() {
     return data;

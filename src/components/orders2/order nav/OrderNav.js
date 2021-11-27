@@ -1,8 +1,8 @@
 import React, { useState, useContext } from 'react'
-import "../navbar/navbar.css"
-import "./orders.css"
-import { Wrapper } from './style'
-import { MyCardContext } from '../../context/OrdersContex'
+import "../../navbar/navbar.css"
+// import "../orders.css"
+import { MyCardContext } from '../../../context/OrdersContex'
+import { NavBody } from './style'
 // import { toggle } from "./NavObj"
 const OrdersNav = () => {
     const [data, setData] = useContext(MyCardContext);
@@ -10,8 +10,11 @@ const OrdersNav = () => {
     console.log(card)
     const [active, setActive] = useState(null);
     const [show, setShow] = useState(true);
-    const change = (id) => {
-        setActive(id)
+    const change = (index) => {
+        setActive(index)
+        // let newData = card.filter(([names, value]) => value.index === index)
+        // setCard([newData]);
+        // console.log(newData)
     }
     const toggle1 = () => {
         setShow(false)
@@ -20,21 +23,19 @@ const OrdersNav = () => {
         setShow(true)
     }
     return (
-        <div className='nobody'>
-            <div className='nav'>
-                <div className='addnew'>
-                    <div className='circle'><div>+</div></div>
+        <NavBody>
+            <div style={{ display: "flex" }}>
+                <div className='addnews'>
+                    <div className='myplus'><div>+</div></div>
                     <p>Add a new product</p>
                 </div>
                 <div className='togglebar'>
                     <div className='sorts' >
                         {card.map(([name, value], index) => (
-                            <Wrapper>
-                                <div onClick={() => change(index + 1)}
-                                    id={index + 1}
-                                    key={index + 1}
-                                    className={`item activeMe-${active === index + 1}`}>{name}</div>
-                            </Wrapper>
+                            <button onClick={() => change(index)}
+                                id={index}
+                                key={index}
+                                className={`item activeMe-${active === index}`} disabled>{name}</button>
                         ))}
                     </div>
                 </div>
@@ -53,7 +54,7 @@ const OrdersNav = () => {
             </div>
             <div>
             </div>
-        </div >
+        </NavBody >
     )
 
 }

@@ -1,5 +1,4 @@
-import Generic from "../pages/Generic"
-import OrdersNav from "../components/orders/OrderNav"
+//IMAGES:
 import { ReactComponent as order } from "../assets/icon/check-circle.svg"
 import { ReactComponent as archive } from "../assets/icon/archive.svg"
 import { ReactComponent as category } from "../assets/icon/layers.svg"
@@ -9,8 +8,9 @@ import { ReactComponent as report } from "../assets/icon/bar-chart-2.svg"
 // import { ReactComponent as settings } from "../assets/icon/settings copy 2.svg"
 // import { ReactComponent as logout } from "../assets/icon/"
 
-
 //COMPONENTS:
+import Generic from "../pages/Generic"
+import Orders from "../components/orders/Orders"
 
 
 
@@ -20,7 +20,7 @@ export const sidebar = [
         title: "Orders",
         pathname: "/Orders",
         child: [],
-        component: OrdersNav,
+        component: Orders,
         hidden: false,
         icon: order,
     },

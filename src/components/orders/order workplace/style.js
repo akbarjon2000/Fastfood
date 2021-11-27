@@ -55,5 +55,5 @@ display:flex;
 flex-direction:row;
 `
 export const Wrapper = styled.div`
-display:flex;
+
 `

@@ -1,19 +1,13 @@
 import React, { Component } from 'react'
-import Sidebar from "../sidebar/sidebar"
-import OrderNav from "./OrderNav"
-import New from './New'
+import OrderNav from "./order nav/OrderNav"
+import OrderBody from './order workplace'
 import "./orders.css"
-export default class Orders extends Component {
-    render() {
-        return (
-            <div className='orders'>
-                {/* <Sidebar /> */}
-                <div>
-                    <OrderNav />
-                    <New />
-                </div>
-
-            </div>
-        )
-    }
+const Orders = () => {
+    return (
+        <div style={{ display: "flex", flexDirection: 'column' }}>
+            <OrderNav />
+            <OrderBody />
+        </div>
+    )
 }
+export default Orders;
