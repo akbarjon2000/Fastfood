@@ -1,6 +1,7 @@
 export const orders = {
     new: [{
         id: 1,
+        category: "new",
         orderNum: 8549,
         time: Date.now(),
         customer: "Muhammad Ali",
@@ -14,6 +15,7 @@ export const orders = {
     },
     {
         id: 2,
+        category: "new",
         orderNum: 8534,
         time: Date.now(),
         customer: "Deveeprasad Acharya",
@@ -26,6 +28,7 @@ export const orders = {
         branch: "Suwon City"
     }, {
         id: 3,
+        category: "new",
         orderNum: 8522,
         time: Date.now(),
         customer: "Thoma Fulloway",
@@ -38,6 +41,7 @@ export const orders = {
         branch: "Suwon City"
     }, {
         id: 4,
+        category: "new",
         orderNum: 8512,
         time: Date.now(),
         customer: "Jaquelin Likoki",
@@ -52,6 +56,7 @@ export const orders = {
     received: [
         {
             id: 1,
+            category: "received",
             orderNum: 8512,
             time: Date.now(),
             customer: "Jaquelin Likoki",
@@ -67,6 +72,7 @@ export const orders = {
     sent: [
         {
             id: 4,
+            category: "sent",
             orderNum: 8512,
             time: Date.now(),
             customer: "Jaquelin Likoki",
@@ -79,6 +85,7 @@ export const orders = {
             branch: "Suwon City"
         }, {
             id: 4,
+            category: "sent",
             orderNum: 8512,
             time: Date.now(),
             customer: "Jaquelin Likoki",
@@ -94,6 +101,7 @@ export const orders = {
     closed: [
         {
             id: 4,
+            category: "closed",
             orderNum: 8512,
             time: Date.now(),
             customer: "Jaquelin Likoki",
@@ -106,6 +114,7 @@ export const orders = {
             branch: "Suwon City"
         }, {
             id: 4,
+            category: "closed",
             orderNum: 8512,
             time: Date.now(),
             customer: "Jaquelin Likoki",

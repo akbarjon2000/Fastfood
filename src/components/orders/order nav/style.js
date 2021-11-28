@@ -1,4 +1,8 @@
 import styled from "styled-components"
+export const Container = styled.div`
+display:flex;
+flex-direction:column;
+`
 export const NavBody = styled.div`
   display: flex;
   flex-direction: column;
@@ -178,4 +182,20 @@ export const NavBody = styled.div`
   opacity: unset;
   color: black;
 }
+`
+NavBody.Item = styled.div`
+display:flex;
+align-items:center;
+justify-content:center;
+width: 162px;
+height: 36px;
+left: 563px;
+top: 22px;
+background:${({ active }) => active && '#ffffff'} ;
+box-shadow: 0px 2px 2px rgba(174, 176, 181, 0.314986);
+border-radius: 18px;
+cursor:pointer;
+`
+export const Wrapper = styled.div`
+
 `

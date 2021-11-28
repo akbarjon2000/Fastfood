@@ -59,9 +59,7 @@ const Card = () => {
                             </div>
                         </div>
                         {value.map((item) => (
-
                             <Column>
-
                                 <div style={{
                                     display: "flex",
                                     alignItems: "center",
@@ -110,7 +108,6 @@ const Card = () => {
                                         borderBottom: "1px solid rgb(220, 220, 220)",
                                         margin: "0 auto",
                                         width: "202px",
-
                                     }}>
                                         <div style={{
                                             display: "flex",
@@ -124,11 +121,8 @@ const Card = () => {
                                                     marginTop: "19px",
                                                     marginLeft: "22px"
                                                 }}>{item.customer}</div>
-
                                             </div>
-
                                         </div>
-
                                         <p style={{
                                             marginTop: "5px",
                                             marginLeft: "33px",

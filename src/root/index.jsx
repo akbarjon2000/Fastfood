@@ -3,7 +3,7 @@ import { Container, Wrapper } from './style';
 import { BrowserRouter as Router, NavLink, Routes, Route, } from "react-router-dom"
 import { sidebar } from "../utils/sidebar"
 
-// import Sidebar from '../components/Sidebar';
+import Sidebar from '../components/Sidebar';
 import Test from '../components/orders/order workplace/test';
 import OrderBody from "../components/orders/order workplace"
 import Card from '../components/orders2/cards';
@@ -16,7 +16,7 @@ export const Root = () => {
         <Container>
             <Router>
                 <OrdersContex>
-                    <Orders2 />
+                    <Sidebar />
                     <Routes>
                         {
                             sidebar.map(({ id, pathname, component: Element }) => (
