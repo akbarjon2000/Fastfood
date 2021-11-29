@@ -192,7 +192,7 @@ height: 36px;
 left: 563px;
 top: 22px;
 background:${({ active }) => active && '#ffffff'} ;
-box-shadow: 0px 2px 2px rgba(174, 176, 181, 0.314986);
+box-shadow: ${({active}) => active && `0px 2px 2px rgba(174, 176, 181, 0.314986)`};
 border-radius: 18px;
 cursor:pointer;
 `
