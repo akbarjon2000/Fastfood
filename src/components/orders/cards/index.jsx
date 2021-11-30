@@ -1,7 +1,9 @@
 import React, { useState, useContext } from 'react'
 
 import { Column, Container, Wrapper } from './style';
-import "./stylesheet.css"
+
+import { orders } from '../../../utils/orders';
+//ICONS:
 import { ReactComponent as Clock } from "../../../assets/icon/clock.svg"
 import { ReactComponent as Remark } from "../../../assets/icon/Remark.svg"
 import { ReactComponent as User } from "../../../assets/icon/user.svg"
@@ -9,8 +11,7 @@ import { ReactComponent as X } from "../../../assets/icon/x.svg"
 import { ReactComponent as Tick } from "../../../assets/icon/tick.svg"
 import { MyCardContext } from '../../../context/OrdersContex';
 const Card = () => {
-    const [card, setCard] = useContext(MyCardContext)
-    const [data, setData] = useState(Object.entries(card));
+    const [data, setData] = useState(Object.entries(orders));
     // const onDelete1 = (id) => {
     //     let newData = card.new.filter((value) => value.id !== id);
     //     setCard(newData);
@@ -36,6 +37,8 @@ const Card = () => {
                             display: "flex",
                             flexDirection: "row",
                             alignItems: "center",
+                            marginLeft: "40px",
+                            marginBottom: '10px'
                         }}>
                             <p style={{
                                 marginRight: '12px',
@@ -54,7 +57,7 @@ const Card = () => {
                                 <p style={{
                                     opacity: "70%",
                                 }}>
-                                    {5}
+                                    {3}
                                 </p>
                             </div>
                         </div>
@@ -132,7 +135,8 @@ const Card = () => {
 
                                         <div style={{
                                             display: "flex",
-                                            alignItems: "center"
+                                            alignItems: "center",
+                                            marginTop: "20px"
                                         }}>
                                             <p style={{
                                                 margin: "0",
