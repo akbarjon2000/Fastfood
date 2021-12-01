@@ -45,28 +45,7 @@ var Container = _styledComponents["default"].div(_templateObject());
 
 exports.Container = Container;
 
-var Column = _styledComponents["default"].div(_templateObject2()); // Container.col2 = styled.div`
-// margin-left:14px;
-// width:234px;
-// display:flex;
-// flex-direction:column;
-// justify-content:flex-start;
-// `
-// Container.col3 = styled.div`
-// width:234px;
-// margin-left:14px;
-// display:flex;
-// flex-direction:column;
-// justify-content:flex-start;
-// `
-// Container.col4 = styled.div`
-// width:234px;
-// margin-left:14px;
-// display:flex;
-// flex-direction:column;
-// justify-content:flex-start;
-// `
-
+var Column = _styledComponents["default"].div(_templateObject2());
 
 exports.Column = Column;
 

@@ -12,22 +12,22 @@ import { ReactComponent as Tick } from "../../../assets/icon/tick.svg"
 import { MyCardContext } from '../../../context/OrdersContex';
 const Card = () => {
     const [data, setData] = useState(Object.entries(orders));
-    // const onDelete1 = (id) => {
-    //     let newData = card.new.filter((value) => value.id !== id);
-    //     setCard(newData);
-    // }
-    // const onDelete2 = (id) => {
-    //     let newData = card.received.filter((value) => value.id !== id);
-    //     setCard(newData);
-    // }
-    // const onDelete3 = (id) => {
-    //     let newData = card.sent.filter((value) => value.id !== id);
-    //     setCard(newData);
-    // }
-    // const onDelete4 = (id) => {
-    //     let newData = card.closed.filter((value) => value.id !== id);
-    //     setCard(newData);
-    // }
+    const onDelete1 = (id) => {
+        let newData = card.new.filter((value) => value.id !== id);
+        setCard(newData);
+    }
+    const onDelete2 = (id) => {
+        let newData = card.received.filter((value) => value.id !== id);
+        setCard(newData);
+    }
+    const onDelete3 = (id) => {
+        let newData = card.sent.filter((value) => value.id !== id);
+        setCard(newData);
+    }
+    const onDelete4 = (id) => {
+        let newData = card.closed.filter((value) => value.id !== id);
+        setCard(newData);
+    }
     return (
         <Container>
             {
