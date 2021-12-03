@@ -1,6 +1,6 @@
 import React from 'react'
-import { Container, Wrapper } from './style';
-import { BrowserRouter as Router, NavLink, Routes, Route, } from "react-router-dom"
+import { Container } from './style';
+import { BrowserRouter as Router, Routes, Route, } from "react-router-dom"
 import { sidebar } from "../utils/sidebar"
 
 import Sidebar from '../components/Sidebar';

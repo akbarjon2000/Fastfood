@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 
 import { Column, Container, Wrapper } from './style';
 
@@ -9,30 +9,29 @@ import { ReactComponent as Remark } from "../../../assets/icon/Remark.svg"
 import { ReactComponent as User } from "../../../assets/icon/user.svg"
 import { ReactComponent as X } from "../../../assets/icon/x.svg"
 import { ReactComponent as Tick } from "../../../assets/icon/tick.svg"
-import { MyCardContext } from '../../../context/OrdersContex';
 const Card = () => {
-    const [data, setData] = useState(Object.entries(orders));
-    const onDelete1 = (id) => {
-        let newData = card.new.filter((value) => value.id !== id);
-        setCard(newData);
-    }
-    const onDelete2 = (id) => {
-        let newData = card.received.filter((value) => value.id !== id);
-        setCard(newData);
-    }
-    const onDelete3 = (id) => {
-        let newData = card.sent.filter((value) => value.id !== id);
-        setCard(newData);
-    }
-    const onDelete4 = (id) => {
-        let newData = card.closed.filter((value) => value.id !== id);
-        setCard(newData);
-    }
+    const [data] = useState(Object.entries(orders));
+    // const onDelete1 = (id) => {
+    //     let newData = card.new.filter((value) => value.id !== id);
+    //     setCard(newData);
+    // }
+    // const onDelete2 = (id) => {
+    //     let newData = card.received.filter((value) => value.id !== id);
+    //     setCard(newData);
+    // }
+    // const onDelete3 = (id) => {
+    //     let newData = card.sent.filter((value) => value.id !== id);
+    //     setCard(newData);
+    // }
+    // const onDelete4 = (id) => {
+    //     let newData = card.closed.filter((value) => value.id !== id);
+    //     setCard(newData);
+    // }
     return (
         <Container>
             {
-                data.map(([name, value]) => (
-                    <Wrapper>
+                data.map(([name, value], index) => (
+                    <Wrapper key={index}>
                         <div style={{
                             display: "flex",
                             flexDirection: "row",
@@ -61,8 +60,8 @@ const Card = () => {
                                 </p>
                             </div>
                         </div>
-                        {value.map((item) => (
-                            <Column>
+                        {value.map((item, index) => (
+                            <Column key={index}>
                                 <div style={{
                                     display: "flex",
                                     alignItems: "center",

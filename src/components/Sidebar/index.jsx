@@ -1,14 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Container, Exit, Header, Item, Title, Wrapper } from './style';
-import { BrowserRouter as Router, NavLink, Routes, Route, } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { sidebar } from '../../utils/sidebar';
 import { ReactComponent as Logout } from "../../assets/icon/log-out.svg"
 import { ReactComponent as Bitmap } from "../../assets/icon/Bitmap.svg"
 const Sidebar = () => {
-    const [active, setActive] = useState(false);
-    const logout = () => {
-        setActive(true)
-    }
+
     return (
         <Container>
             <Header>
@@ -20,7 +17,7 @@ const Sidebar = () => {
             </Header>
             <Wrapper>
                 <div></div>
-                {sidebar.map(({ id, title, pathname, child, component, icon: Icon }) => (
+                {sidebar.map(({ id, title, pathname, icon: Icon }) => (
                     <NavLink key={id} to={pathname} style={({ isActive }) => {
                         return {
                             color: isActive ? 'white' : '#2D3A45',
@@ -44,7 +41,7 @@ const Sidebar = () => {
                     </NavLink>
                 ))}
             </Wrapper>
-            <Exit onClick={logout}>
+            <Exit>
                 <Logout className="icon" />
                 <Title>Exit</Title>
             </Exit>

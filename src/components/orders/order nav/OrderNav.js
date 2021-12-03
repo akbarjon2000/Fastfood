@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import "../../navbar/navbar.css"
 import "../orders.css"
 // import { MyCardContext } from '../../../context/OrdersContex'
@@ -17,7 +17,7 @@ import { ReactComponent as X } from "../../../assets/icon/x.svg"
 import { ReactComponent as Tick } from "../../../assets/icon/tick.svg"
 const OrdersNav = () => {
     // const [data, setData] = useContext(MyCardContext);
-    const [card, setCard] = useState(Object.entries(orders));
+    const [card] = useState(Object.entries(orders));
 
     const [isActive, setActive] = useState('New');
     const [show, setShow] = useState(true);
@@ -29,8 +29,8 @@ const OrdersNav = () => {
         setShow(true)
     }
     const onDelete = (id) => {
-        const filtered = card.map(([key, value]) => value
-            .filter((a) => a.id === id))
+        // const filtered = card.map(([key, value]) => value
+        //     .filter((a) => a.id === id))
     }
     return (
         <PageContainer>
@@ -82,7 +82,6 @@ const OrdersNav = () => {
                         .filter((a) => a.category === isActive.toLowerCase())
                         .map((item) => (
                             <Wrapper key={index}>
-
                                 <Container.one>
                                     <Container.one.colone className='col1'>
                                         <div className='orderInfo'>
