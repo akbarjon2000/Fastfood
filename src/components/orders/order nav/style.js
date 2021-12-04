@@ -9,7 +9,7 @@ export const NavBody = styled.div`
   .addnews {
   width: 205px !important;
   height: 80px !important;
-  margin: 0 2px 20px 2px !important;
+  margin: 0 2px 0 2px !important;
 
   display: flex !important;
   flex-direction: row !important;

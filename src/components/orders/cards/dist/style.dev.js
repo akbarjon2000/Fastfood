@@ -30,7 +30,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\ndisplay:flex;\nflex-direction:row;\noverflow:hidden;\n"]);
+  var data = _taggedTemplateLiteral(["\ndisplay:flex;\nflex-direction:row;\noverflow:hidden;\nmargin-top:20px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
