@@ -3,14 +3,24 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Button = exports.Container = void 0;
+exports.Close = exports.Drawer = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\nposition:absolute;\nbackground-color:red;\ncolor:white;\nwidth:80px;\nheight:40px;\ntop:10px;\n/* z-index:999; */\nborder-radius:18px;\ndisplay:flex;\nalign-items:center;\npadding-left:15px;\nleft:", ";\ncursor: pointer;\ntransition:all 0.6s;\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\nposition:absolute;\nbackground-color:red;\ncolor:white;\nwidth:80px;\nheight:40px;\ntop:10px;\n/* z-index:999; */\nborder-radius:18px;\ndisplay:flex;\nalign-items:center;\npadding-left:15px;\nleft:-40px;\nright:-40px;\n"]);
+  var data = _taggedTemplateLiteral(["\nposition:absolute;\nwidth: ", ";\nright:", ";\nheight:100vh;\nbackground-color:red;\nz-index:999;\ntransition: all 0.5s;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -20,7 +30,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\nposition:absolute;\nwidth: ", ";\nright:", ";\nheight:100vh;\nbackground-color:red;\nz-index:999;\ntransition: all 0.5s;\n"]);
+  var data = _taggedTemplateLiteral(["\nposition:absolute;\nwidth: 100%;\nright:", ";\nheight:100vh;\nbackground-color:black;\nz-index:999;\nopacity:0.5;\ndisplay:", ";\noverflow: hidden;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -32,16 +42,30 @@ function _templateObject() {
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var Container = _styledComponents["default"].div(_templateObject(), function (_ref) {
-  var width = _ref.width;
-  return width ? "".concat(width) : "400px";
+  var open = _ref.open,
+      width = _ref.width;
+  return open ? "0" : "-".concat(width);
 }, function (_ref2) {
-  var isOpen = _ref2.isOpen,
-      width = _ref2.width;
-  return isOpen ? "0" : "-".concat(width);
+  var open = _ref2.open;
+  return open ? "flex" : "none";
 });
 
 exports.Container = Container;
 
-var Button = _styledComponents["default"].div(_templateObject2());
+var Drawer = _styledComponents["default"].div(_templateObject2(), function (_ref3) {
+  var width = _ref3.width;
+  return width ? "".concat(width) : "400px";
+}, function (_ref4) {
+  var open = _ref4.open,
+      width = _ref4.width;
+  return open ? "0" : "-".concat(width);
+});
 
-exports.Button = Button;
+exports.Drawer = Drawer;
+
+var Close = _styledComponents["default"].div(_templateObject3(), function (_ref5) {
+  var open = _ref5.open;
+  return open ? "-40px" : "0";
+});
+
+exports.Close = Close;

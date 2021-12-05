@@ -1,14 +1,19 @@
-import React, { useState } from 'react'
-import { Button, Container } from './style';
+import React from 'react'
+import { Close, Container, Drawer } from './style';
 
 const Index = ({ children, open, width, onClose }) => {
 
     return (
-        <Container isOpen={open} width={width}>
-            <Button onClick={onClose}>X</Button>
+        <div style={{ overFlow: "hidden" }}>
+            <Container open={open} >
 
-            {children}
-        </Container>
+            </Container>
+            <Drawer open={open} width={width}>
+                <Close open={open} onClick={onClose}>X</Close>
+
+                {children}
+            </Drawer>
+        </div>
     )
 }
 export default Index;

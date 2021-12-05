@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import GenericDrawer from "../../Generic Drawer"
 import { Column, Container, Wrapper } from './style';
 
@@ -11,6 +11,8 @@ import { ReactComponent as X } from "../../../assets/icon/x.svg"
 import { ReactComponent as Tick } from "../../../assets/icon/tick.svg"
 const Card = () => {
     const [data] = useState(Object.entries(orders));
+    const [cardName, setCardName] = useState('')
+    const [cardId, setCardId] = useState(null)
     const [open, setOpen] = useState(false)
 
     const onClose = () => {
@@ -32,14 +34,21 @@ const Card = () => {
     //     let newData = card.closed.filter((value) => value.id !== id);
     //     setCard(newData);
     // }
+    const openDrawer = (cardName, id) => {
+        setOpen(true);
+        // const newData = data.map((value) => value.map((item) => item.filter((card) => card.id === id)));
+        // setCardName(name)
+        const newData = data.map((itemName, value) => value.map((item) => item))
+        console.log(newData)
+    }
     return (
         <>
-            <GenericDrawer open={open} width="800px" onClose={onClose}>
+            <GenericDrawer open={open} width="500px" onClose={onClose}>
 
             </GenericDrawer>
             <Container>
                 {
-                    data.map(([name, value], index) => (
+                    data.map(([objname, value], index) => (
                         <Wrapper key={index}>
                             <div style={{
                                 display: "flex",
@@ -51,7 +60,7 @@ const Card = () => {
                                 <p style={{
                                     marginRight: '12px',
                                     opacity: "70%"
-                                }}>{name}</p>
+                                }}>{objname}</p>
                                 <div style={{
                                     width: "30px",
                                     height: "20px",
@@ -205,7 +214,7 @@ const Card = () => {
                                                 marginTop: "15px",
                                                 position: "relative",
                                                 left: "-15px"
-                                            }} onClick={() => setOpen(!open)}><Tick style={{ margin: "0" }} /></div>
+                                            }} onClick={() => openDrawer(item.category, item.id)}><Tick style={{ margin: "0" }} /></div>
                                         </div>
                                     </div>
                                 </Column>
