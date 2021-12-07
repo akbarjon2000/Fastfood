@@ -1,5 +1,5 @@
-export const orders = {
-    new: [{
+export const orders = [
+    [{
         id: 1,
         category: "new",
         orderNum: 8549,
@@ -53,7 +53,7 @@ export const orders = {
         operator: "Komila A",
         branch: "Suwon City"
     }],
-    received: [
+    [
         {
             id: 1,
             category: "received",
@@ -69,7 +69,7 @@ export const orders = {
             branch: "Suwon City"
         }
     ],
-    sent: [
+    [
         {
             id: 1,
             category: "sent",
@@ -98,7 +98,7 @@ export const orders = {
             branch: "Suwon City"
         }
     ],
-    closed: [
+    [
         {
             id: 1,
             category: "closed",
@@ -141,4 +141,4 @@ export const orders = {
             branch: "Suwon City"
         }
     ]
-}
+]

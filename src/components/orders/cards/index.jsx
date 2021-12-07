@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import GenericDrawer from "../../Generic Drawer"
 import { Column, Container, Wrapper } from './style';
-
+import { MyCardContext } from '../../../context/OrdersContex';
 import { orders } from '../../../utils/orders';
 //ICONS:
 import { ReactComponent as Clock } from "../../../assets/icon/clock.svg"
@@ -10,11 +10,9 @@ import { ReactComponent as User } from "../../../assets/icon/user.svg"
 import { ReactComponent as X } from "../../../assets/icon/x.svg"
 import { ReactComponent as Tick } from "../../../assets/icon/tick.svg"
 const Card = () => {
-    const [data] = useState(Object.entries(orders));
-    // const [cardName, setCardName] = useState('')
-    // const [cardId, setCardId] = useState(null)
+    const [card] = useContext(MyCardContext);
+    const [data] = useState(card)
     const [open, setOpen] = useState(false)
-
     const onClose = () => {
         setOpen(false)
     }
@@ -37,21 +35,24 @@ const Card = () => {
 
     return (
         <>
+            <GenericDrawer open={open} width="500px" onClose={onClose}>
+            </GenericDrawer>
             <Container>
+
                 {
-                    data.map(([objname, value], index) => (
+                    data.map((value, index) => (
                         <Wrapper key={index}>
                             <div style={{
                                 display: "flex",
                                 flexDirection: "row",
                                 alignItems: "center",
-                                marginLeft: "40px",
+                                marginLeft: "5px",
                                 marginBottom: '10px'
                             }}>
                                 <p style={{
                                     marginRight: '12px',
                                     opacity: "70%"
-                                }}>{objname}</p>
+                                }}>{value.map((item) => item.category)}</p>
                                 <div style={{
                                     width: "30px",
                                     height: "20px",
@@ -65,7 +66,7 @@ const Card = () => {
                                     <p style={{
                                         opacity: "70%",
                                     }}>
-                                        {3}
+                                        { }
                                     </p>
                                 </div>
                             </div>
@@ -208,9 +209,6 @@ const Card = () => {
                                             }} onClick={() => setOpen(true)}><Tick style={{ margin: "0" }} /></div>
                                         </div>
                                     </div>
-                                    <GenericDrawer open={open} width="500px" onClose={onClose}>
-
-                                    </GenericDrawer>
                                 </Column>
                             ))}
 

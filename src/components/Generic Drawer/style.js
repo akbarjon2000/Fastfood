@@ -27,7 +27,7 @@ color:white;
 width:80px;
 height:40px;
 top:10px;
-/* z-index:999; */
+z-index:-1;
 border-radius:18px;
 display:flex;
 align-items:center;
