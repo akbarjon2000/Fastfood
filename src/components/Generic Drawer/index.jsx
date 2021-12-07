@@ -6,11 +6,9 @@ const Index = ({ children, open, width, onClose }) => {
     return (
         <div style={{ overFlow: "hidden" }}>
             <Container open={open} >
-
             </Container>
             <Drawer open={open} width={width}>
                 <Close open={open} onClick={onClose}>X</Close>
-
                 {children}
             </Drawer>
         </div>

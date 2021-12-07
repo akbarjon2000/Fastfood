@@ -82,8 +82,8 @@ const OrdersNav = () => {
                         .filter((a) => a.category === isActive.toLowerCase())
                         .map((item) => (
                             <Wrapper key={index}>
-                                <Container.one>
-                                    <Container.one.colone className='col1'>
+                                <Container.One>
+                                    <Container.One.Colone className='col1'>
                                         <div className='orderInfo'>
                                             <div className='ordnum'>8597</div>
                                             <div className='time'><Clock /><p style={{
@@ -96,10 +96,10 @@ const OrdersNav = () => {
                                         </div>
                                         <div className='remark'><Remark /></div>
 
-                                    </Container.one.colone>
-                                </Container.one>
-                                <Container.two>
-                                    <Container.two.rowone>
+                                    </Container.One.Colone>
+                                </Container.One>
+                                <Container.Two>
+                                    <Container.Two.Rowone>
                                         <User />
                                         <p style={{
                                             margin: "0",
@@ -112,8 +112,8 @@ const OrdersNav = () => {
                                             textAlign: "left"
 
                                         }}>{item.customer}</p>
-                                    </Container.two.rowone>
-                                    <Container.two.rowtwo>
+                                    </Container.Two.Rowone>
+                                    <Container.Two.Rowtwo>
                                         <Telephone className="telephone" />
                                         <p style={{
                                             margin: "0",
@@ -125,9 +125,9 @@ const OrdersNav = () => {
                                             letterSpacing: "0.6666666865348816px",
                                             textAlign: "left"
                                         }}>{item.phoneNum}</p>
-                                    </Container.two.rowtwo>
-                                </Container.two>
-                                <Container.three>
+                                    </Container.Two.Rowtwo>
+                                </Container.Two>
+                                <Container.Three>
 
                                     <div>
                                         <div style={{
@@ -163,8 +163,8 @@ const OrdersNav = () => {
                                         <div className='littleCircle'></div>
                                         <p className='payment'>{item.paymentType}</p>
                                     </div>
-                                </Container.three>
-                                <Container.four>
+                                </Container.Three>
+                                <Container.Four>
 
                                     <div style={{}}>
                                         <p style={{
@@ -201,7 +201,7 @@ const OrdersNav = () => {
                                     >
                                         <X /></div>
                                     <div className='tick'><Tick /></div>
-                                </Container.four>
+                                </Container.Four>
                             </Wrapper>
                         ))
                     )}

@@ -198,7 +198,7 @@ display:flex;
 flex-direction:column;
 
 `
-Container.one = styled.div`
+Container.One = styled.div`
 display:flex;
 flex-direction:row;
 width:218px;
@@ -206,38 +206,38 @@ height:100%auto;
 border-right:1px solid #EDEFF3;
 /* margin:20px 16px 35px 36px; */
 `
-Container.one.colone = styled.div`
+Container.One.Colone = styled.div`
 display:flex;
 flex-direction:row;
 margin-left:36px;
 margin-top:20px;
 `
-Container.two = styled.div`
+Container.Two = styled.div`
 width:247px;
 height:100%;
 border-right:1px solid #EDEFF3;
 
 `
-Container.two.rowone = styled.div`
+Container.Two.Rowone = styled.div`
 display:flex;
 flex-direction:row;
 margin-top:25px;
 margin-left:34px;
 `
-Container.two.rowtwo = styled.div`
+Container.Two.Rowtwo = styled.div`
 display:flex;
 flex-direction:row;
 margin-top:28px;
 margin-left:34px;
 `
-Container.three = styled.div`
+Container.Three = styled.div`
 width:272px;
 height:100%;
 border-right:1px solid #EDEFF3;
 display:flex;
 flex-direction:row;
 `
-Container.four = styled.div`
+Container.Four = styled.div`
 display:flex;
 flex-direction:row;
 `

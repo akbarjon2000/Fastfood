@@ -11,8 +11,8 @@ import { ReactComponent as X } from "../../../assets/icon/x.svg"
 import { ReactComponent as Tick } from "../../../assets/icon/tick.svg"
 const Card = () => {
     const [data] = useState(Object.entries(orders));
-    const [cardName, setCardName] = useState('')
-    const [cardId, setCardId] = useState(null)
+    // const [cardName, setCardName] = useState('')
+    // const [cardId, setCardId] = useState(null)
     const [open, setOpen] = useState(false)
 
     const onClose = () => {
@@ -34,18 +34,9 @@ const Card = () => {
     //     let newData = card.closed.filter((value) => value.id !== id);
     //     setCard(newData);
     // }
-    const openDrawer = (cardName, id) => {
-        setOpen(true);
-        // const newData = data.map((value) => value.map((item) => item.filter((card) => card.id === id)));
-        // setCardName(name)
-        const newData = data.map((itemName, value) => value.map((item) => item))
-        console.log(newData)
-    }
+
     return (
         <>
-            <GenericDrawer open={open} width="500px" onClose={onClose}>
-
-            </GenericDrawer>
             <Container>
                 {
                     data.map(([objname, value], index) => (
@@ -214,9 +205,12 @@ const Card = () => {
                                                 marginTop: "15px",
                                                 position: "relative",
                                                 left: "-15px"
-                                            }} onClick={() => openDrawer(item.category, item.id)}><Tick style={{ margin: "0" }} /></div>
+                                            }} onClick={() => setOpen(true)}><Tick style={{ margin: "0" }} /></div>
                                         </div>
                                     </div>
+                                    <GenericDrawer open={open} width="500px" onClose={onClose}>
+
+                                    </GenericDrawer>
                                 </Column>
                             ))}
 
