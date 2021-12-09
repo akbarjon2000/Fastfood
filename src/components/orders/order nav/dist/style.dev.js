@@ -30,7 +30,7 @@ function _templateObject13() {
 }
 
 function _templateObject12() {
-  var data = _taggedTemplateLiteral(["\ndisplay:flex;\nflex-direction:column;\n"]);
+  var data = _taggedTemplateLiteral(["\ndisplay:flex;\nflex-direction:column;\nmargin-top: 20px;\n.x {\n  width: 50px;\n  height: 50px;\n  border: 5px solid rgba(237, 239, 243, 1);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 50%;\n  margin-top: 20px;\n  position: relative;\n  background-color: white;\n  left: 80px;\n}\n.x:hover {\n  cursor: pointer;\n}\n.tick {\n  width: 50px;\n  height: 50px;\n  border: 5px solid rgba(237, 239, 243, 1);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 50%;\n  margin-top: 80px;\n  position: relative;\n  left: 33px !important;\n  background-color: white;\n}\n.tick:hover {\n  cursor: pointer;\n}\n"]);
 
   _templateObject12 = function _templateObject12() {
     return data;

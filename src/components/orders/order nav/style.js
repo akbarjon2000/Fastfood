@@ -244,6 +244,39 @@ flex-direction:row;
 export const ContainerBody = styled.div`
 display:flex;
 flex-direction:column;
+margin-top: 20px;
+.x {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(237, 239, 243, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-top: 20px;
+  position: relative;
+  background-color: white;
+  left: 80px;
+}
+.x:hover {
+  cursor: pointer;
+}
+.tick {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(237, 239, 243, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-top: 80px;
+  position: relative;
+  left: 33px !important;
+  background-color: white;
+}
+.tick:hover {
+  cursor: pointer;
+}
 `
 export const Wrapper = styled.div`
 display:flex;
