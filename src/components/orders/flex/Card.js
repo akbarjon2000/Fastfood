@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Column, Wrapper } from './style'
+import { Column, Wrapper, Container, Container2 } from './style'
 import GenericDrawer from "../../Generic Drawer"
 
 //ICONS:
@@ -20,7 +20,66 @@ export const Card = ({ item, index }) => {
     return (
         <div>
             <Wrapper key={item.id}>
-                <GenericDrawer open={open} width="500px" onClose={onClose} />
+                <GenericDrawer open={open} width="400px" onClose={onClose} item={item} >
+                    <Container2>
+
+                        <Container2.Col1 >
+                            <div className='ordnum' style={{ width: "60px", height: "30px", marginLeft: '0' }}>8549</div>
+                            <Container2.Clock >
+                                <Clock style={{}} /><p style={{
+                                    margin: "0",
+                                    marginLeft: "10px"
+                                }}>00:24</p>
+                            </Container2.Clock>
+                        </Container2.Col1>
+                        <Container2.Customer >
+                            <User style={{
+                                padding: "0",
+                                width: "fit-content",
+                                height: "fit-content",
+                                marginLeft: "22px",
+                                marginTop: "0",
+                                marginBottom: "10px"
+                            }} />
+                            <Container2.CustomerInfo >
+                                <div style={{ fontSize: "18px" }}>Muhammad Ali</div>
+                                <p style={{
+                                    opacity: "70%",
+                                    fontSize: "16px",
+                                    marginBottom: "10px"
+                                }}>+8201091519002</p>
+                            </Container2.CustomerInfo>
+                        </Container2.Customer>
+                        <Container2.FoodCenter>
+
+                            <div style={{ display: "flex" }}>
+                                <div>
+                                    <p style={{
+                                        opacity: "70%",
+                                        fontSize: "15px"
+                                    }}>Operator:</p>
+                                    <p >{item.operator}</p>
+                                </div>
+                            </div>
+                            <div style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "space-between"
+                            }}>
+                                <div>
+                                    <p style={{
+                                        fontSize: "15px",
+                                        opacity: "70%"
+                                    }}>Branch:</p>
+                                    <p>{item.branch}</p>
+                                </div>
+                            </div>
+                        </Container2.FoodCenter>
+                        <Container2.OrderInfo>
+
+                        </Container2.OrderInfo>
+                    </Container2>
+                </GenericDrawer>
                 <Column >
 
                     <div key={item.id} style={{

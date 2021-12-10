@@ -67,9 +67,57 @@ margin-bottom:15px;
 }
 
 `
-
 export const Wrapper = styled.div`
 display:flex;
 flex-direction:column;
 /* margin-bottom:100px; */
+`
+
+
+
+//DRAWER
+export const Container2 = styled.div`
+
+`
+Container2.Col1 = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom: 28px;
+    width:100%;
+`
+Container2.Clock = styled.div`
+
+    margin-left: 30px;
+    /* margin-top: 25px; */
+    display: flex;
+    align-items: center;
+        
+`
+Container2.Customer = styled.div`
+    width:318px;
+    height:93px;
+    border-radius:6px;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    background-color: #EDEFF3;
+`
+Container2.FoodCenter = styled.div`
+display:flex;
+flex-direction:row;
+align-items:center;
+justify-content:space-between;
+margin-top:30px;
+font-size:20px;
+border-bottom:1px solid rgb(200,200,200);
+padding-bottom:45px;
+margin-bottom:45px;
+`
+Container2.OrderInfo = styled.div`
+width:178px;
+height:45px;
+padding-left:14px;
+/* font-size:18px; */
 `
