@@ -20,7 +20,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\nposition:absolute;\nwidth: ", ";\nright:", ";\nheight:100vh;\nbackground-color:white;\nz-index:999;\ntransition: all 0.5s;\nborder:1px solid red;\nmargin:0;\npadding:40px;\n"]);
+  var data = _taggedTemplateLiteral(["\nposition:absolute;\nwidth: ", ";\nright:", ";\nheight:100vh;\nbackground-color:white;\nz-index:999;\ntransition: all 0.5s;\nborder:1px solid red;\nmargin:0;\n/* padding:40px; */\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;

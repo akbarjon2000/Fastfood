@@ -11,7 +11,27 @@ export const orders = {
         total: "40,000 KRW",
         paymentType: "Payme",
         operator: "Komila A",
-        branch: "Suwon City"
+        branch: "Suwon City",
+        order: [
+            {
+                id: 1,
+                type: "Burger standard",
+                cost: 6000,
+                count: 4
+            },
+            {
+                id: 2,
+                type: "Bread Sandwich",
+                cost: 5000,
+                count: 2
+            },
+            {
+                id: 3,
+                type: "Coca-Cola 1.5L",
+                cost: 3500,
+                count: 1
+            },
+        ]
     },
     {
         id: 2,
@@ -25,7 +45,27 @@ export const orders = {
         total: "40,000 KRW",
         paymentType: "Payme",
         operator: "Komila A",
-        branch: "Suwon City"
+        branch: "Suwon City",
+        order: [
+            {
+                id: 1,
+                type: "Burger standard",
+                cost: 6000,
+                count: 4
+            },
+            {
+                id: 2,
+                type: "Bread Sandwich",
+                cost: 5000,
+                count: 2
+            },
+            {
+                id: 3,
+                type: "Coca-Cola 1.5L",
+                cost: 3500,
+                count: 1
+            },
+        ]
     }, {
         id: 3,
         category: "new",
@@ -38,7 +78,27 @@ export const orders = {
         total: "40,000 KRW",
         paymentType: "Payme",
         operator: "Komila A",
-        branch: "Suwon City"
+        branch: "Suwon City",
+        order: [
+            {
+                id: 1,
+                type: "Burger standard",
+                cost: 6000,
+                count: 4
+            },
+            {
+                id: 2,
+                type: "Bread Sandwich",
+                cost: 5000,
+                count: 2
+            },
+            {
+                id: 3,
+                type: "Coca-Cola 1.5L",
+                cost: 3500,
+                count: 1
+            },
+        ]
     }, {
         id: 4,
         category: "new",
@@ -51,7 +111,27 @@ export const orders = {
         total: "40,000 KRW",
         paymentType: "Payme",
         operator: "Komila A",
-        branch: "Suwon City"
+        branch: "Suwon City",
+        order: [
+            {
+                id: 1,
+                type: "Burger standard",
+                cost: 6000,
+                count: 4
+            },
+            {
+                id: 2,
+                type: "Bread Sandwich",
+                cost: 5000,
+                count: 2
+            },
+            {
+                id: 3,
+                type: "Coca-Cola 1.5L",
+                cost: 3500,
+                count: 1
+            },
+        ]
     }],
     received: [
         {
@@ -66,7 +146,27 @@ export const orders = {
             total: "40,000 KRW",
             paymentType: "Payme",
             operator: "Komila A",
-            branch: "Suwon City"
+            branch: "Suwon City",
+            order: [
+                {
+                    id: 1,
+                    type: "Burger standard",
+                    cost: 6000,
+                    count: 4
+                },
+                {
+                    id: 2,
+                    type: "Bread Sandwich",
+                    cost: 5000,
+                    count: 2
+                },
+                {
+                    id: 3,
+                    type: "Coca-Cola 1.5L",
+                    cost: 3500,
+                    count: 1
+                },
+            ]
         }
     ],
     sent: [
@@ -82,7 +182,27 @@ export const orders = {
             total: "40,000 KRW",
             paymentType: "Payme",
             operator: "Komila A",
-            branch: "Suwon City"
+            branch: "Suwon City",
+            order: [
+                {
+                    id: 1,
+                    type: "Burger standard",
+                    cost: 6000,
+                    count: 4
+                },
+                {
+                    id: 2,
+                    type: "Bread Sandwich",
+                    cost: 5000,
+                    count: 2
+                },
+                {
+                    id: 3,
+                    type: "Coca-Cola 1.5L",
+                    cost: 3500,
+                    count: 1
+                },
+            ]
         }, {
             id: 2,
             category: "sent",
@@ -95,7 +215,27 @@ export const orders = {
             total: "40,000 KRW",
             paymentType: "Payme",
             operator: "Komila A",
-            branch: "Suwon City"
+            branch: "Suwon City",
+            order: [
+                {
+                    id: 1,
+                    type: "Burger standard",
+                    cost: 6000,
+                    count: 4
+                },
+                {
+                    id: 2,
+                    type: "Bread Sandwich",
+                    cost: 5000,
+                    count: 2
+                },
+                {
+                    id: 3,
+                    type: "Coca-Cola 1.5L",
+                    cost: 3500,
+                    count: 1
+                },
+            ]
         }
     ],
     closed: [
@@ -111,7 +251,27 @@ export const orders = {
             total: "40,000 KRW",
             paymentType: "Payme",
             operator: "Komila A",
-            branch: "Suwon City"
+            branch: "Suwon City",
+            order: [
+                {
+                    id: 1,
+                    type: "Burger standard",
+                    cost: 6000,
+                    count: 4
+                },
+                {
+                    id: 2,
+                    type: "Bread Sandwich",
+                    cost: 5000,
+                    count: 2
+                },
+                {
+                    id: 3,
+                    type: "Coca-Cola 1.5L",
+                    cost: 3500,
+                    count: 1
+                },
+            ]
         }, {
             id: 2,
             category: "closed",
@@ -124,7 +284,27 @@ export const orders = {
             total: "40,000 KRW",
             paymentType: "Payme",
             operator: "Komila A",
-            branch: "Suwon City"
+            branch: "Suwon City",
+            order: [
+                {
+                    id: 1,
+                    type: "Burger standard",
+                    cost: 6000,
+                    count: 4
+                },
+                {
+                    id: 2,
+                    type: "Bread Sandwich",
+                    cost: 5000,
+                    count: 2
+                },
+                {
+                    id: 3,
+                    type: "Coca-Cola 1.5L",
+                    cost: 3500,
+                    count: 1
+                },
+            ]
         },
         {
             id: 3,
@@ -138,7 +318,27 @@ export const orders = {
             total: "40,000 KRW",
             paymentType: "Payme",
             operator: "Komila A",
-            branch: "Suwon City"
+            branch: "Suwon City",
+            order: [
+                {
+                    id: 1,
+                    type: "Burger standard",
+                    cost: 6000,
+                    count: 4
+                },
+                {
+                    id: 2,
+                    type: "Bread Sandwich",
+                    cost: 5000,
+                    count: 2
+                },
+                {
+                    id: 3,
+                    type: "Coca-Cola 1.5L",
+                    cost: 3500,
+                    count: 1
+                },
+            ]
         }
     ]
 }

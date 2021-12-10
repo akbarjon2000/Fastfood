@@ -8,10 +8,15 @@ import { ReactComponent as Remark } from "../../../assets/icon/Remark.svg"
 import { ReactComponent as User } from "../../../assets/icon/user.svg"
 import { ReactComponent as X } from "../../../assets/icon/x.svg"
 import { ReactComponent as Tick } from "../../../assets/icon/tick.svg"
+import { ReactComponent as Vector } from "../../../assets/icon/Vector.svg"
+import { ReactComponent as Truck } from "../../../assets/icon/truck.svg"
 
-export const Card = ({ item, index }) => {
+export const Card = ({ item }) => {
     const [open, setOpen] = useState(false)
     const onClose = () => {
+        setOpen(false)
+    }
+    const setClose = () => {
         setOpen(false)
     }
     const onDelete = (id) => {
@@ -39,10 +44,10 @@ export const Card = ({ item, index }) => {
                                 height: "fit-content",
                                 marginLeft: "22px",
                                 marginTop: "0",
-                                marginBottom: "10px"
+                                marginBottom: "30px"
                             }} />
                             <Container2.CustomerInfo >
-                                <div style={{ fontSize: "18px" }}>Muhammad Ali</div>
+                                <div style={{ fontSize: "18px" }}>{item.customer}</div>
                                 <p style={{
                                     opacity: "70%",
                                     fontSize: "16px",
@@ -51,7 +56,6 @@ export const Card = ({ item, index }) => {
                             </Container2.CustomerInfo>
                         </Container2.Customer>
                         <Container2.FoodCenter>
-
                             <div style={{ display: "flex" }}>
                                 <div>
                                     <p style={{
@@ -76,12 +80,46 @@ export const Card = ({ item, index }) => {
                             </div>
                         </Container2.FoodCenter>
                         <Container2.OrderInfo>
-
+                            <p style={{ flex: "1" }}>PRODUCTS</p>
+                            <p style={{ flex: "1" }}>COUNT | COST</p>
                         </Container2.OrderInfo>
+                        <Container2.OrderedFood>
+                            {item.order.map((value) => (
+                                <div style={{ display: "flex", width: "100%", marginBottom: "20px" }} key={value.id}>
+                                    <p style={{ flex: "1" }}>{value.type}</p>
+                                    <p style={{ flex: "1" }}>{value.count}*{value.cost} KRW</p>
+                                </div>
+                            ))}
+                        </Container2.OrderedFood>
+                        <Container2.Total>
+                            <div style={{ display: "flex", flex: "1" }}>
+                                <Vector style={{ marginRight: "10px" }} />
+                                <p>57,500 KRW</p>
+                            </div>
+                            <div style={{ flex: "1" }}>
+                                <div style={{ display: "flex", }}>
+                                    <Truck style={{ marginRight: "10px" }} />
+                                    <p>3000 KRW</p>
+                                </div>
+                                <div style={{ display: "flex", marginTop: '15px' }}>
+                                    <Container2.Circle></Container2.Circle>
+                                    <p>Pay me</p>
+                                </div>
+                            </div>
+                        </Container2.Total>
+                        <div style={{ display: "flex", marginTop: "35px", marginLeft: "40px" }}>
+                            <div className='x'>
+
+                                <X />
+                            </div >
+                            <div className='tick' onClick={setClose}>
+
+                                <Tick />
+                            </div>
+                        </div>
                     </Container2>
                 </GenericDrawer>
                 <Column >
-
                     <div key={item.id} style={{
                         width: "234px",
                         height: "345px",
@@ -178,14 +216,12 @@ export const Card = ({ item, index }) => {
                                 }}>{item.operator}</p>
                             </div>
                             <div className='x' style={{ marginTop: "11px" }} onClick={() => onDelete(item.id)} ><X style={{ marginRight: "0" }} /></div>
-
                         </div>
                         <div style={{
                             display: "flex",
                             flexDirection: "row",
                             justifyContent: "space-between"
                         }}>
-
                             <div>
                                 <p style={{
                                     marginTop: "15px",
@@ -198,7 +234,6 @@ export const Card = ({ item, index }) => {
                                     marginTop: "0",
                                     marginLeft: "16px"
                                 }}>{item.branch}</p>
-
                             </div>
                             <div className='tick' style={{
                                 margin: "0",
