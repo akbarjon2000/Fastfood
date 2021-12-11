@@ -2,7 +2,7 @@ import React from 'react'
 import { Container } from './style';
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom"
 import { sidebar } from "../utils/sidebar"
-
+import Products from '../components/products/Products';
 import Sidebar from '../components/Sidebar';
 
 //Contexts:
@@ -13,6 +13,7 @@ export const Root = () => {
         <Container>
             <Router>
                 <OrdersContex>
+                    {/* <Products /> */}
                     <Sidebar />
                     <Routes>
                         {

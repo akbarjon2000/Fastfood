@@ -1,18 +1,18 @@
 import React, { useState, useContext } from 'react'
-// import { data } from "../products/data"
+import { data as Products } from "../../utils/ProductsData"
 import "./navbar.css"
 import { ReactComponent as Filter } from "./filter.svg"
 import { ReactComponent as Search } from "./search.svg"
 import { NavBody } from './style'
-// import { MyContext } from '../../context'
+// import { MyContext } from '../../context/ProductsContext'
 const Navbar = () => {
     // const [mydata, setData] = useContext(MyContext)
-    // const [data] = useState(mydata);
-    // const onChange = (e) => {
-    //     let newData = data.filter((value) => value.category.toLowerCase().includes(e.target.value.toLowerCase()))
-    //     console.log(newData);
-    //     setData(newData)
-    // }
+    const [data, setData] = useState(Products);
+    const onChange = (e) => {
+        let newData = data.filter((value) => value.category.toLowerCase().includes(e.target.value.toLowerCase()))
+        console.log(newData);
+        setData(newData)
+    }
     return (
         <NavBody>
             <div className='nav'>

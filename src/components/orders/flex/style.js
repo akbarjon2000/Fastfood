@@ -4,6 +4,7 @@ display:flex;
 flex-direction:row;
 overflow:hidden;
 margin-top:20px;
+margin-left:15px;
 `
 export const Column = styled.div`
 margin-left:20px;

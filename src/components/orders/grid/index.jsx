@@ -12,15 +12,14 @@ import { ReactComponent as X } from "../../../assets/icon/x.svg"
 import { ReactComponent as Tick } from "../../../assets/icon/tick.svg"
 const Grid = ({ isActive }) => {
     const [data] = useContext(MyCardContext);
-    const [card] = useState(Object.entries(data))
+    const [card, setCard] = useState(data)
     const onDelete = (id) => {
-        // const filtered = card.map(([key, value]) => value
-        //     .filter((a) => a.id === id))
+        const filtered = card.filter((value) => value.id !== id);
+        setCard(filtered)
     }
     return (
         <ContainerBody>
-            {card.map(([key, value], index) => value
-                .filter((a) => a.category === isActive.toLowerCase())
+            {card.filter((a) => a.category === isActive.toLowerCase())
                 .map((item, index) => (
                     <Wrapper key={index}>
                         <Container.One>
@@ -125,7 +124,7 @@ const Grid = ({ isActive }) => {
                                     marginTop: "1px",
                                     marginLeft: "35px",
                                     fontWeight: "600"
-                                }}>{value.operator}</p>
+                                }}>{item.operator}</p>
                                 <p style={{
                                     fontSize: "11px",
                                     lineHeight: "18px",
@@ -145,7 +144,7 @@ const Grid = ({ isActive }) => {
                         </Container.Four>
                     </Wrapper>
                 ))
-            )}
+            }
         </ContainerBody>
     )
 }

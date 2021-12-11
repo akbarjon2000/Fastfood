@@ -5,23 +5,23 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.data = void 0;
 
-var _Oval = _interopRequireDefault(require("../components/icons/Oval.png"));
+var _Oval = _interopRequireDefault(require("../icons/Oval.png"));
 
-var _OvalCopy = _interopRequireDefault(require("../assets/img/Oval Copy"));
+var _OvalCopy = _interopRequireDefault(require("../icons/Oval Copy.png"));
 
-var _OvalCopy2 = _interopRequireDefault(require("../components/icons/Oval Copy 2.png"));
+var _OvalCopy2 = _interopRequireDefault(require("../icons/Oval Copy 2.png"));
 
-var _OvalCopy3 = _interopRequireDefault(require("../components/icons/Oval Copy 3.png"));
+var _OvalCopy3 = _interopRequireDefault(require("../icons/Oval Copy 3.png"));
 
-var _OvalCopy4 = _interopRequireDefault(require("../components/icons/Oval Copy 4.png"));
+var _OvalCopy4 = _interopRequireDefault(require("../icons/Oval Copy 4.png"));
 
-var _OvalCopy5 = _interopRequireDefault(require("../components/icons/Oval Copy 5.png"));
+var _OvalCopy5 = _interopRequireDefault(require("../icons/Oval Copy 5.png"));
 
-var _OvalCopy6 = _interopRequireDefault(require("../components/icons/Oval Copy 7.png"));
+var _OvalCopy6 = _interopRequireDefault(require("../icons/Oval Copy 7.png"));
 
-var _Path = require("../components/icons/Path.svg");
+var _Path = require("../icons/Path.svg");
 
-var _trash = require("../components/icons/trash-2.svg");
+var _trash = require("../icons/trash-2.svg");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 

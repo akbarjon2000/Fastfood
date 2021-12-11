@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Column, Wrapper, Container, Container2 } from './style'
+import React, { useState, useContext } from 'react'
+import { Column, Wrapper, Container2 } from './style'
 import GenericDrawer from "../../Generic Drawer"
 
 //ICONS:
@@ -11,17 +11,16 @@ import { ReactComponent as Tick } from "../../../assets/icon/tick.svg"
 import { ReactComponent as Vector } from "../../../assets/icon/Vector.svg"
 import { ReactComponent as Truck } from "../../../assets/icon/truck.svg"
 
-export const Card = ({ item }) => {
+export const Card = ({ item, onDelete }) => {
     const [open, setOpen] = useState(false)
+
     const onClose = () => {
         setOpen(false)
     }
     const setClose = () => {
         setOpen(false)
     }
-    const onDelete = (id) => {
-        console.log(id)
-    }
+
     return (
         <div>
             <Wrapper key={item.id}>
@@ -108,7 +107,7 @@ export const Card = ({ item }) => {
                             </div>
                         </Container2.Total>
                         <div style={{ display: "flex", marginTop: "35px", marginLeft: "40px" }}>
-                            <div className='x'>
+                            <div className='x' >
 
                                 <X />
                             </div >
