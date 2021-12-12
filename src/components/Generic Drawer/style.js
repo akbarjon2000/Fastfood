@@ -2,25 +2,29 @@ import styled from "styled-components";
 
 export const Shadow = styled.div`
 position:absolute;
+top:0;
 width: 100%;
 right:${({ open, width }) => open ? "0" : `-${width}`};
-height:100vh;
+height:100%;
 background-color:black;
 z-index:999;
 opacity:0.5;
+overflow:visible;
 display:${({ open }) => open ? "flex" : "none"};
-overflow: hidden;
+
 `
 export const Container = styled.div`
 position:absolute;
+top:0;
 width: ${({ width }) => width ? `${width}` : "400px"};
 right:${({ open, width }) => open ? "0" : `-${width}`};
-height:100vh;
+height:850px;
 background-color:white;
 z-index:999;
 transition: all 0.5s;
 border:1px solid red;
 margin:0;
+
 /* padding:40px; */
 `
 export const Close = styled.div`

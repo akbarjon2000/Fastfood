@@ -11,7 +11,7 @@ import { ReactComponent as report } from "../assets/icon/bar-chart-2.svg"
 //COMPONENTS:
 import Generic from "../pages/Generic"
 import Orders from "../components/orders/Orders"
-
+import Products from "../components/products/Products"
 
 
 export const sidebar = [
@@ -29,7 +29,7 @@ export const sidebar = [
         title: "Products",
         pathname: "/Products",
         child: [],
-        component: Generic,
+        component: Products,
         hidden: false,
         icon: archive,
     }, {

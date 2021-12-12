@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react'
 import { MyCardContext } from '../../../context/OrdersContex'
 import { Container, Wrapper, ContainerBody } from '../order nav/style'
+import { Container2 } from '../flex/style'
+import Drawer from "../../Generic Drawer"
 // ICONS:
 import { ReactComponent as Clock } from "../../../assets/icon/clock.svg"
 import { ReactComponent as Remark } from "../../../assets/icon/Remark.svg"
@@ -13,6 +15,14 @@ import { ReactComponent as Tick } from "../../../assets/icon/tick.svg"
 const Grid = ({ isActive }) => {
     const [data] = useContext(MyCardContext);
     const [card, setCard] = useState(data)
+    const [open, setOpen] = useState(false)
+
+    const onClose = () => {
+        setOpen(false)
+    }
+    const setClose = () => {
+        setOpen(false)
+    }
     const onDelete = (id) => {
         const filtered = card.filter((value) => value.id !== id);
         setCard(filtered)
@@ -22,6 +32,100 @@ const Grid = ({ isActive }) => {
             {card.filter((a) => a.category === isActive.toLowerCase())
                 .map((item, index) => (
                     <Wrapper key={index}>
+                        <Drawer open={open} width="400px" onClose={onClose} item={item}>
+                            <Container2>
+
+                                <Container2.Col1 >
+                                    <div className='ordnum' style={{ width: "60px", height: "30px", marginLeft: '0' }}>8549</div>
+                                    <Container2.Clock >
+                                        <Clock style={{}} /><p style={{
+                                            margin: "0",
+                                            marginLeft: "10px"
+                                        }}>00:24</p>
+                                    </Container2.Clock>
+                                </Container2.Col1>
+                                <Container2.Customer >
+                                    <User style={{
+                                        padding: "0",
+                                        width: "fit-content",
+                                        height: "fit-content",
+                                        marginLeft: "22px",
+                                        marginTop: "0",
+                                        marginBottom: "30px"
+                                    }} />
+                                    <Container2.CustomerInfo >
+                                        <div style={{ fontSize: "18px" }}>{item.customer}</div>
+                                        <p style={{
+                                            opacity: "70%",
+                                            fontSize: "16px",
+                                            marginBottom: "10px"
+                                        }}>+8201091519002</p>
+                                    </Container2.CustomerInfo>
+                                </Container2.Customer>
+                                <Container2.FoodCenter>
+                                    <div style={{ display: "flex" }}>
+                                        <div>
+                                            <p style={{
+                                                opacity: "70%",
+                                                fontSize: "15px"
+                                            }}>Operator:</p>
+                                            <p >{item.operator}</p>
+                                        </div>
+                                    </div>
+                                    <div style={{
+                                        display: "flex",
+                                        flexDirection: "row",
+                                        justifyContent: "space-between"
+                                    }}>
+                                        <div>
+                                            <p style={{
+                                                fontSize: "15px",
+                                                opacity: "70%"
+                                            }}>Branch:</p>
+                                            <p>{item.branch}</p>
+                                        </div>
+                                    </div>
+                                </Container2.FoodCenter>
+                                <Container2.OrderInfo>
+                                    <p style={{ flex: "1" }}>PRODUCTS</p>
+                                    <p style={{ flex: "1" }}>COUNT | COST</p>
+                                </Container2.OrderInfo>
+                                <Container2.OrderedFood>
+                                    {item.order.map((value) => (
+                                        <div style={{ display: "flex", width: "100%", marginBottom: "20px" }} key={value.id}>
+                                            <p style={{ flex: "1" }}>{value.type}</p>
+                                            <p style={{ flex: "1" }}>{value.count}*{value.cost} KRW</p>
+                                        </div>
+                                    ))}
+                                </Container2.OrderedFood>
+                                <Container2.Total>
+                                    <div style={{ display: "flex", flex: "1" }}>
+                                        <Vector style={{ marginRight: "10px" }} />
+                                        <p>57,500 KRW</p>
+                                    </div>
+                                    <div style={{ flex: "1" }}>
+                                        <div style={{ display: "flex", }}>
+                                            <Truck style={{ marginRight: "10px" }} />
+                                            <p>3000 KRW</p>
+                                        </div>
+                                        <div style={{ display: "flex", marginTop: '15px' }}>
+                                            <Container2.Circle></Container2.Circle>
+                                            <p>Pay me</p>
+                                        </div>
+                                    </div>
+                                </Container2.Total>
+                                <div style={{ display: "flex", marginTop: "35px", marginLeft: "40px" }}>
+                                    <div className='x' onClick={onClose}>
+
+                                        <X />
+                                    </div >
+                                    <div className='tick' onClick={setClose}>
+
+                                        <Tick />
+                                    </div>
+                                </div>
+                            </Container2>
+                        </Drawer>
                         <Container.One>
                             <Container.One.Colone className='col1'>
                                 <div className='orderInfo'>
@@ -140,7 +244,7 @@ const Grid = ({ isActive }) => {
                                 onClick={() => onDelete(item.id)}
                             >
                                 <X /></div>
-                            <div className='tick'><Tick /></div>
+                            <div className='tick' onClick={() => setOpen(true)}><Tick /></div>
                         </Container.Four>
                     </Wrapper>
                 ))

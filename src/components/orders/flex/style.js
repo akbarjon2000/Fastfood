@@ -2,7 +2,7 @@ import styled from "styled-components"
 export const Container = styled.div`
 display:flex;
 flex-direction:row;
-overflow:hidden;
+overflow-x:scroll;
 margin-top:20px;
 margin-left:15px;
 `

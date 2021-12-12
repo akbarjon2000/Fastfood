@@ -1,8 +1,7 @@
 import React, { useState, useContext } from 'react'
-import "./main.css"
 import { ReactComponent as Edit } from "../../assets/icon/Path.svg"
 import { ReactComponent as Deletebtn } from "../../assets/icon/trash-2.svg"
-import { Restore } from './styled'
+import { Restore, Container } from './styled'
 import { MyContext } from '../../context/ProductsContext'
 const FastFood = () => {
     const [active] = useState(null)
@@ -17,7 +16,7 @@ const FastFood = () => {
         setData(data)
     }
     return (
-        <>
+        <Container>
             {
                 mydata.length ?
                     mydata.map((value) => (
@@ -35,7 +34,7 @@ const FastFood = () => {
                     ))
                     : <Restore onClick={Reset} className='heartbeat'><i class="fa-solid fa-trash-arrow-up  "></i> Restore</Restore>
             }
-        </>
+        </Container>
     )
 }
 

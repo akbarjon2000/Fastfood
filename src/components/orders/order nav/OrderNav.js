@@ -7,7 +7,7 @@ import Card from '../flex'
 
 const OrdersNav = () => {
     const [isActive, setActive] = useState('New');
-    const [show, setShow] = useState(true);
+    const [show, setShow] = useState(false);
 
     const toggle1 = () => {
         setShow(false)
@@ -58,10 +58,13 @@ const OrdersNav = () => {
                 <div>
                 </div>
             </NavBody >
-            {show ?
-                <Card />
-                : <Grid isActive={isActive} />
-            }
+            <div style={{ position: "relative" }}>
+
+                {show ?
+                    <Card />
+                    : <Grid isActive={isActive} />
+                }
+            </div>
         </PageContainer >
     )
 

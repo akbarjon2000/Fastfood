@@ -3,7 +3,7 @@ import { Close, Container, Shadow } from './style';
 
 const Index = ({ open, width, onClose, item, children }) => {
     return (
-        <div style={{ overFlow: "hidden" }}>
+        <div style={{ overflowY: "scroll" }}>
             <Shadow open={open} width={width}></Shadow>
             <Container open={open} width={width} >
                 <Close open={open} onClick={onClose}>X</Close>

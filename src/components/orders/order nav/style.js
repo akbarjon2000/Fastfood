@@ -2,7 +2,8 @@ import styled from "styled-components"
 export const PageContainer = styled.div`
 display:flex;
 flex-direction:column;
-overflow:hidden;
+overflow-x:hidden;
+position:fixed;
 `
 export const NavBody = styled.div`
   display: flex;
@@ -288,6 +289,7 @@ width:964px;
 height:150px;
 margin-left:50px;
 border-radius:6px;
+00000
 .ordnum{
 margin:0;
 }

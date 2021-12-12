@@ -7,23 +7,25 @@ import Sidebar from '../components/Sidebar';
 
 //Contexts:
 import { OrdersContex } from '../context/OrdersContex';
-
+import ProductsContext from "../context/ProductsContext"
 export const Root = () => {
     return (
         <Container>
             <Router>
-                <OrdersContex>
-                    {/* <Products /> */}
-                    <Sidebar />
-                    <Routes>
-                        {
-                            sidebar.map(({ id, pathname, component: Element }) => (
-                                <Route key={id} path={pathname} element={<Element />} />
-                            ))
-                        }
-                        <Route path="*" element={<h1>404 Not Found</h1>} />
-                    </Routes>
-                </OrdersContex>
+                <ProductsContext>
+
+                    <OrdersContex>
+                        <Sidebar />
+                        <Routes>
+                            {
+                                sidebar.map(({ id, pathname, component: Element }) => (
+                                    <Route key={id} path={pathname} element={<Element />} />
+                                ))
+                            }
+                            <Route path="*" element={<h1>404 Not Found</h1>} />
+                        </Routes>
+                    </OrdersContex>
+                </ProductsContext>
             </Router>
         </Container>
     )
