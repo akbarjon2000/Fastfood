@@ -20,8 +20,8 @@ const FastFood = () => {
             {
                 mydata.length ?
                     mydata.map((value) => (
-                        <div className={`base delete-${active === value.id}`}>
-                            <img src={value.Img} className='foodIcon1'></img>
+                        <div className={`base delete-${active === value.id}`} key={value.id}>
+                            <img src={value.Img} className='foodIcon1' alt='aaa'></img>
                             <div className='meal'>{value.foodType}</div>
                             <div className='mycategories'> <p className='mycategories1'>{value.category}</p> </div>
                             <div className='costtext'> <p className='costtext1'>{value.cost}</p> </div>

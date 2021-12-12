@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react'
 import { data as Products } from "../../utils/ProductsData"
-import "./navbar.css"
 import { ReactComponent as Filter } from "./filter.svg"
 import { ReactComponent as Search } from "./search.svg"
 import { NavBody } from './style'
@@ -37,11 +36,11 @@ const Navbar = () => {
                 </div>
             </div>
             <div className='categories'>
-                <div className='product'><p1>PRODUCT</p1></div>
-                <div className='category'><p2>CATEGORY</p2></div>
-                <div className='cost'><p3>COST</p3></div>
-                <div className='add'><p4>ADDITIONAL INFO</p4></div>
-                <div className='action'><p5>ACTION</p5></div>
+                <div className='product'><p className='p1'>PRODUCT</p></div>
+                <div className='category'><p className='p2'>CATEGORY</p></div>
+                <div className='cost'><p className='p3'>COST</p></div>
+                <div className='add'><p className='p4'>ADDITIONAL INFO</p></div>
+                <div className='action'><p className='p5'>ACTION</p></div>
             </div>
         </NavBody >
     )

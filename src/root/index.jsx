@@ -2,30 +2,38 @@ import React from 'react'
 import { Container } from './style';
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom"
 import { sidebar } from "../utils/sidebar"
-import Products from '../components/products/Products';
 import Sidebar from '../components/Sidebar';
 
 //Contexts:
 import { OrdersContex } from '../context/OrdersContex';
-import ProductsContext from "../context/ProductsContext"
+import ProductsContext from "../context/ProductsContext";
+import CategoryContext from '../context/CategoryContext';
+import BranchContex from '../context/branchContex';
+import { CustomersContext } from '../context/CustomersContext';
+
 export const Root = () => {
     return (
         <Container>
             <Router>
-                <ProductsContext>
-
-                    <OrdersContex>
-                        <Sidebar />
-                        <Routes>
-                            {
-                                sidebar.map(({ id, pathname, component: Element }) => (
-                                    <Route key={id} path={pathname} element={<Element />} />
-                                ))
-                            }
-                            <Route path="*" element={<h1>404 Not Found</h1>} />
-                        </Routes>
-                    </OrdersContex>
-                </ProductsContext>
+                <CustomersContext>
+                    <BranchContex>
+                        <CategoryContext>
+                            <ProductsContext>
+                                <OrdersContex>
+                                    <Sidebar />
+                                    <Routes>
+                                        {
+                                            sidebar.map(({ id, pathname, component: Element }) => (
+                                                <Route key={id} path={pathname} element={<Element />} />
+                                            ))
+                                        }
+                                        <Route path="*" element={<h1>404 Not Found</h1>} />
+                                    </Routes>
+                                </OrdersContex>
+                            </ProductsContext>
+                        </CategoryContext>
+                    </BranchContex>
+                </CustomersContext>
             </Router>
         </Container>
     )

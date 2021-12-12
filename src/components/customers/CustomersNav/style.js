@@ -50,14 +50,12 @@ export const Container = styled.div`
   background-color: white;
   display: flex;
   flex-direction: row;
-  align-items:center;
-  padding:0;
 }
 .searchInput {
   width: 300px;
   height: 48px;
   margin-left: 48px;
-  margin-top: 0;
+  margin-top: 16px;
   border-radius: 24px;
   background-color: #edeff3;
   border: unset;
@@ -78,12 +76,12 @@ export const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 0;
+  margin-top: 15px;
   margin-left: 10px;
   border-radius: 50%;
   border: 7px solid #edeff3;
-  width: 46px;
-  height: 46px;
+  width: 36px;
+  height: 36px;
 }
 .categories {
   display: flex;
@@ -102,7 +100,7 @@ export const Container = styled.div`
   height: 22px;
   border-right: 1px solid #8d9ba8;
 }
-.product p1 {
+.p1 {
   margin-left: 56px;
 }
 .categories .category {
@@ -110,7 +108,7 @@ export const Container = styled.div`
   height: 22px;
   border-right: 1px solid #8d9ba8;
 }
-.category p2 {
+.p2 {
   margin-left: 12px;
 }
 .cost {
@@ -118,7 +116,7 @@ export const Container = styled.div`
   height: 22px;
   border-right: 1px solid #8d9ba8;
 }
-.cost p3 {
+.p3 {
   margin-left: 11.5px;
 }
 .add {
@@ -126,14 +124,14 @@ export const Container = styled.div`
   height: 22px;
   border-right: 1px solid #8d9ba8;
 }
-.add p4 {
+.p4 {
   margin-left: 11.5px;
 }
 .action {
   width: 197.5px;
   height: 22px;
 }
-.action p5 {
+.p5 {
   margin-left: 11.5px;
 }
 

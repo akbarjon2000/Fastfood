@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import { Column, Wrapper, Container2 } from './style'
 import GenericDrawer from "../../Generic Drawer"
 
@@ -118,8 +118,8 @@ export const Card = ({ item, onDelete }) => {
                         </div>
                     </Container2>
                 </GenericDrawer>
-                <Column >
-                    <div key={item.id} style={{
+                <Column key={item.id}>
+                    <div style={{
                         width: "234px",
                         height: "345px",
                         backgroundColor: "white",

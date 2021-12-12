@@ -12,8 +12,9 @@ import { ReactComponent as report } from "../assets/icon/bar-chart-2.svg"
 import Generic from "../pages/Generic"
 import Orders from "../components/orders/Orders"
 import Products from "../components/products/Products"
-
-
+import Category from "../components/category/Category"
+import Branches from "../components/branches"
+import Customers from "../components/customers"
 export const sidebar = [
     {
         id: 1,
@@ -37,7 +38,7 @@ export const sidebar = [
         title: "Category",
         pathname: "/Category",
         child: [],
-        component: Generic,
+        component: Category,
         hidden: false,
         icon: category,
     }, {
@@ -45,7 +46,7 @@ export const sidebar = [
         title: "Branches",
         pathname: "/Branches",
         child: [],
-        component: Generic,
+        component: Branches,
         hidden: false,
         icon: branch,
     }, {
@@ -53,7 +54,7 @@ export const sidebar = [
         title: "Customers",
         pathname: "/Customers",
         child: [],
-        component: Generic,
+        component: Customers,
         hidden: false,
         icon: customers,
     },

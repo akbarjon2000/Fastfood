@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "../../navbar/navbar.css"
+// import "../../navbar/navbar.css"
 import "../orders.css"
 import Grid from '../grid'
 import { NavBody, PageContainer, Sorts } from './style'

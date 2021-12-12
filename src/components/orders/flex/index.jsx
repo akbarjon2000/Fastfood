@@ -5,7 +5,7 @@ import { orders } from '../../../utils/orders';
 import { Card as MyCard } from './Card';
 
 const Card = () => {
-    const [card, setCard] = useContext(MyCardContext);
+    const [card] = useContext(MyCardContext);
     const [data, setData] = useState(orders)
     const categories = ["New", "Received", "Sent", "Closed"]
     const onDelete = (id) => {
