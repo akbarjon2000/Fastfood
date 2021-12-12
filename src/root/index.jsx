@@ -3,7 +3,7 @@ import { Container } from './style';
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom"
 import { sidebar } from "../utils/sidebar"
 import Sidebar from '../components/Sidebar';
-
+import Location from "../components/branches/location"
 //Contexts:
 import { OrdersContex } from '../context/OrdersContex';
 import ProductsContext from "../context/ProductsContext";
@@ -20,7 +20,8 @@ export const Root = () => {
                         <CategoryContext>
                             <ProductsContext>
                                 <OrdersContex>
-                                    <Sidebar />
+                                    <Location></Location>
+                                    {/* <Sidebar />
                                     <Routes>
                                         {
                                             sidebar.map(({ id, pathname, component: Element }) => (
@@ -28,7 +29,7 @@ export const Root = () => {
                                             ))
                                         }
                                         <Route path="*" element={<h1>404 Not Found</h1>} />
-                                    </Routes>
+                                    </Routes> */}
                                 </OrdersContex>
                             </ProductsContext>
                         </CategoryContext>
