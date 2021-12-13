@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Column, Wrapper, Container2 } from './style'
 import GenericDrawer from "../../Generic Drawer"
-
 //ICONS:
 import { ReactComponent as Clock } from "../../../assets/icon/clock.svg"
 import { ReactComponent as Remark } from "../../../assets/icon/Remark.svg"
@@ -13,7 +12,6 @@ import { ReactComponent as Truck } from "../../../assets/icon/truck.svg"
 
 export const Card = ({ item, onDelete }) => {
     const [open, setOpen] = useState(false)
-
     const onClose = () => {
         setOpen(false)
     }

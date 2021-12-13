@@ -4,11 +4,15 @@ import "../orders.css"
 import Grid from '../grid'
 import { NavBody, PageContainer, Sorts } from './style'
 import Card from '../flex'
-
+import GenericDrawer from "../../Generic Drawer"
+import { Container } from './AddNewStyle'
 const OrdersNav = () => {
     const [isActive, setActive] = useState('New');
     const [show, setShow] = useState(false);
-
+    const [open, setOpen] = useState(false)
+    const onClose = () => {
+        setOpen(false)
+    }
     const toggle1 = () => {
         setShow(false)
     }
@@ -20,7 +24,7 @@ const OrdersNav = () => {
             <NavBody>
                 <div style={{ display: "flex" }}>
                     <div className='addnews'>
-                        <div className='myplus'><div>+</div></div>
+                        <div className='myplus' onClick={() => setOpen(!open)}><div>+</div></div>
                         <p>Add a new product</p>
                     </div>
                     <div className='togglebar'>
@@ -64,6 +68,14 @@ const OrdersNav = () => {
                     <Card />
                     : <Grid isActive={isActive} />
                 }
+                <GenericDrawer onClose={onClose} open={open} width="800px" >
+                    <Container>
+                        <div className='left'>
+                            <h1 className='title'>Add New Order</h1>
+
+                        </div>
+                    </Container>
+                </GenericDrawer>
             </div>
         </PageContainer >
     )

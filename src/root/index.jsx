@@ -20,8 +20,8 @@ export const Root = () => {
                         <CategoryContext>
                             <ProductsContext>
                                 <OrdersContex>
-                                    <Location></Location>
-                                    {/* <Sidebar />
+                                    {/* <Location></Location> */}
+                                    <Sidebar />
                                     <Routes>
                                         {
                                             sidebar.map(({ id, pathname, component: Element }) => (
@@ -29,7 +29,7 @@ export const Root = () => {
                                             ))
                                         }
                                         <Route path="*" element={<h1>404 Not Found</h1>} />
-                                    </Routes> */}
+                                    </Routes>
                                 </OrdersContex>
                             </ProductsContext>
                         </CategoryContext>

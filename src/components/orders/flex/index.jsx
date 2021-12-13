@@ -5,13 +5,18 @@ import { orders } from '../../../utils/orders';
 import { Card as MyCard } from './Card';
 
 const Card = () => {
-    const [card] = useContext(MyCardContext);
+    const [card, setCard] = useContext(MyCardContext);
     const [data, setData] = useState(orders)
     const categories = ["New", "Received", "Sent", "Closed"]
     const onDelete = (id) => {
-        let newData = card.filter((value) => value.id !== id)
+        let newData = data.filter((value) => {
+            console.log(value, id);
+            return value.id !== id
+        })
+
+
         setData(newData);
-        console.log(id)
+        console.log(newData)
     }
     return (
         <>
@@ -62,7 +67,7 @@ const Card = () => {
                             </div>
                             {data.filter((f) => f.category === value.toLowerCase()).map((item) => (
 
-                                <MyCard item={item} onDelete={(id) => onDelete(id)} />
+                                <MyCard key={item.id} item={item} onDelete={(id) => onDelete(id)} />
 
                             ))}
                         </div>

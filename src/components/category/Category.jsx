@@ -11,7 +11,7 @@ const Category = () => {
     // const [category, setCategory] = useState(data);
     const onDelete = (id) => {
         let newData = myData.filter((value) => value.id !== id)
-        setData(newData)
+        setData(newData);
     }
     const onreset = () => {
         setData(data);
