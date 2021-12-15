@@ -24,7 +24,6 @@ export const Card = ({ item, onDelete }) => {
             <Wrapper key={item.id}>
                 <GenericDrawer open={open} width="400px" onClose={onClose} item={item} >
                     <Container2>
-
                         <Container2.Col1 >
                             <div className='ordnum' style={{ width: "60px", height: "30px", marginLeft: '0' }}>8549</div>
                             <Container2.Clock >

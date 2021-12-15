@@ -1,12 +1,12 @@
 import React, { useState, useContext } from 'react'
 import { Container } from './style';
 import { MyCardContext } from '../../../context/OrdersContex';
-import { orders } from '../../../utils/orders';
+// import { orders } from '../../../utils/orders';
 import { Card as MyCard } from './Card';
 
 const Card = () => {
-    const [card, setCard] = useContext(MyCardContext);
-    const [data, setData] = useState(orders)
+    const [card] = useContext(MyCardContext);
+    const [data, setData] = useState(card)
     const categories = ["New", "Received", "Sent", "Closed"]
     const onDelete = (id) => {
         let newData = data.filter((value) => {
@@ -49,7 +49,7 @@ const Card = () => {
                                         <p style={{
                                             opacity: "70%",
                                         }}>
-                                            {5}
+                                            {data.filter((f) => f.category === value.toLowerCase()).length}
                                         </p>
                                     </div>
                                 </div>
@@ -62,7 +62,11 @@ const Card = () => {
                                     borderRadius: "6px",
                                 }}>
                                     <div className='bigCircle'></div>
-                                    <p style={{ fontWeight: "700" }}>{ }</p>
+                                    <p style={{ fontWeight: "700" }}>{
+                                        data.filter((f) => f.category === value.toLowerCase()).reduce((state, value) => {
+                                            return state + parseInt(value.total)
+                                        }, 0)
+                                    } KRW</p>
                                 </div>
                             </div>
                             {data.filter((f) => f.category === value.toLowerCase()).map((item) => (

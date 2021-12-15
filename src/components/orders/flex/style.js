@@ -2,9 +2,19 @@ import styled from "styled-components"
 export const Container = styled.div`
 display:flex;
 flex-direction:row;
-overflow-x:scroll;
+overflow-y:auto;
 margin-top:20px;
 margin-left:15px;
+.bigCircle {
+  margin: 0;
+  width: 14px;
+  height: 14px;
+  background-color: rgba(20, 229, 228, 1);
+  border-radius: 50%;
+  margin-right: 38px;
+  margin-left: 16px;
+}
+
 `
 export const Column = styled.div`
 margin-left:20px;
@@ -21,15 +31,7 @@ margin-bottom:15px;
   border-radius: 50%;
   margin-right: 8px;
 }
-.bigCircle {
-  margin: 0;
-  width: 14px;
-  height: 14px;
-  background-color: rgba(20, 229, 228, 1);
-  border-radius: 50%;
-  margin-right: 38px;
-  margin-left: 16px;
-}
+
 .ordnum {
   margin-left: 16px;
   margin-top: 18px;

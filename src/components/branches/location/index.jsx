@@ -1,16 +1,22 @@
 import React from 'react'
-import { GoogleMap, useJsApiLoader } from "@react-google-maps/api"
+import { GoogleMap, useJsApiLoader, Marker, Autocomplete } from "@react-google-maps/api"
 import { Container } from './style';
 
+const libraries = ['places']
 const Index = ({ location }) => {
     const { REACT_APP_MAP_KEY: mapKey } = process.env;
     const { isLoaded } = useJsApiLoader({
-        // googleMapsApiKey: mapKey,
+        googleMapsApiKey: mapKey,
         id: "fastfood",
-        googleMapsApiKey: "AIzaSyDdW7LC6CV - BDiegWcKiyeLoCKFx1uQ4kM"
+        // googleMapsApiKey: "AIzaSyDdW7LC6CV - BDiegWcKiyeLoCKFx1uQ4kM",
+        libraries
     })
+
     return (
         <Container>
+            <Autocomplete onLoad={(e) => console.log(e)}>
+                <input type="text" />
+            </Autocomplete>
             {isLoaded && (
                 <GoogleMap
                     id='fastfood'
@@ -18,7 +24,9 @@ const Index = ({ location }) => {
                     center={{ lat: 40.9983, lng: 71.67257 }}
                     mapContainerClassName='map'
                 >
-
+                    <Marker position={{ lat: 40.9983, lng: 71.67257 }} />
+                    <Marker position={{ lat: 40.9123983, lng: 71.67257 }} />
+                    <Marker position={{ lat: 40.9915383, lng: 71.673257 }} />
                 </GoogleMap>
             )
             }

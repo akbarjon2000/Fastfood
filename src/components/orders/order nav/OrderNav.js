@@ -5,11 +5,22 @@ import Grid from '../grid'
 import { NavBody, PageContainer, Sorts } from './style'
 import Card from '../flex'
 import GenericDrawer from "../../Generic Drawer"
-import { Container } from './AddNewStyle'
+import { Container, DeleteStyle } from './AddNewStyle'
+import { data } from '../../../utils/AddNewUtils/garnierObj'
+import { AddNew } from './AddNew'
+
+//ICONS
+import { ReactComponent as Delete } from "../../../assets/icon/trash-2.svg"
+import { ReactComponent as UserPlus } from "../../../assets/icon/user-plus.svg"
+
+
 const OrdersNav = () => {
     const [isActive, setActive] = useState('New');
+    const [menu, setMenu] = useState("Burger")
+
     const [show, setShow] = useState(false);
     const [open, setOpen] = useState(false)
+    // const id = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     const onClose = () => {
         setOpen(false)
     }
@@ -68,17 +79,87 @@ const OrdersNav = () => {
                     <Card />
                     : <Grid isActive={isActive} />
                 }
-                <GenericDrawer onClose={onClose} open={open} width="800px" >
+                <GenericDrawer onClose={onClose} open={open} width="810px" >
                     <Container>
                         <div className='left'>
                             <h1 className='title'>Add New Order</h1>
+                            <div className='toggle'>
+                                <Container.Item className='item' onClick={() => {
+                                    setMenu("Burger")
+                                }} active={menu === "Burger"}>Burger</Container.Item>
+                                <Container.Item className='item' onClick={() => {
+                                    setMenu("Lavash")
+                                }} active={menu === "Lavash"}>Lavash</Container.Item>
+                                <Container.Item className='item' onClick={() => {
+                                    setMenu("Garnier")
+                                }} active={menu === "Garnier"}>Garnier</Container.Item>
+                                <Container.Item className='item' onClick={() => {
+                                    setMenu("Salats")
+                                }} active={menu === "Salats"}>Salats</Container.Item>
+                                <Container.Item className='item' onClick={() => {
+                                    setMenu("Drinks")
+                                }} active={menu === "Drinks"}>Drinks</Container.Item>
+                                <Container.Item className='item' onClick={() => {
+                                    setMenu("Sous")
+                                }} active={menu === "Sous"}>Sous</Container.Item>
+                            </div>
+                            {
+                                menu === "Garnier" ?
+                                    <div className='manuContainer'>
+                                        {data.map((value) => (
+                                            <AddNew value={value} />
+                                        ))}
+                                    </div>
 
+                                    : <p>Coming soon</p>
+                            }
+                        </div>
+                        <div className='right'>
+                            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                                <p className='rightTitle'>List of orders</p>
+                                <DeleteStyle >
+                                    <Delete className="delete" />
+                                </DeleteStyle>
+                            </div>
+                            <div className='orderList'>
+                                <div style={{ display: "flex", width: "100%", justifyContent: "space-between", marginBottom: "10px" }}>
+                                    <p>Shaurma standard</p>
+                                    <p>40.500 KRW</p>
+                                </div>
+                                <div style={{ display: "flex", width: "100%", justifyContent: "space-between", marginBottom: "10px" }}>
+                                    <p>Pang Sendwich</p>
+                                    <p>40.500 KRW</p>
+                                </div>
+                                <div style={{ display: "flex", width: "100%", justifyContent: "space-between", marginBottom: "10px" }}>
+                                    <p>Coca-Cola 1.5L</p>
+                                    <p>40.500 KRW</p>
+                                </div>
+                                <div className='total'>
+                                    <p className='totalamount'>Total amount</p>
+                                    <p className='totalamount2'>120000 KRW</p>
+                                </div>
+
+                            </div>
+                            <form>
+
+                                <p style={{ marginTop: "16px" }}>Customer's name </p>
+                                <div style={{ display: "flex", alignItems: "center" }}>
+
+                                    <input type='text' className='input1 input' required />
+                                    <div className='usr'>
+                                        <UserPlus />
+                                    </div>
+                                </div>
+                                <p style={{ marginTop: "16px" }}>Phone number</p>
+                                <input className='input ' type="text" required></input>
+                                <p style={{ marginTop: "16px" }}>Location</p>
+                                <input className='input ' type="text" required></input>
+                            </form>
                         </div>
                     </Container>
                 </GenericDrawer>
             </div>
         </PageContainer >
     )
-
 }
 export default OrdersNav;

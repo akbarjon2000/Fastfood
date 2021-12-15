@@ -1,8 +1,10 @@
 import styled from "styled-components"
 export const PageContainer = styled.div`
 display:flex;
+height:100vh;
 flex-direction:column;
 overflow-x:hidden;
+overflow-y:scroll;
 position:fixed;
 `
 export const NavBody = styled.div`
@@ -289,7 +291,6 @@ width:964px;
 height:150px;
 margin-left:50px;
 border-radius:6px;
-00000
 .ordnum{
 margin:0;
 }

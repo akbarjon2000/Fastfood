@@ -1,6 +1,8 @@
 import styled from "styled-components"
 
 export const Container = styled.div`    
+height:100vh;
+overflow-y:auto;
 .base {
   display: flex;
   flex-direction: row;
@@ -70,6 +72,9 @@ export const Container = styled.div`
   border: 4px solid #edeff3;
   border-radius: 50%;
   margin-left: 15px;
+}
+.menu{
+  margin-top:300px;
 }
 .addd {
   width: 992px;

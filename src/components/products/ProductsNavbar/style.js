@@ -3,6 +3,8 @@ export const Container = styled.div`
 .nobody {
   display: flex;
   flex-direction: column;
+  /* position:fixed; */
+
 }
 .nav {
   display: flex;
