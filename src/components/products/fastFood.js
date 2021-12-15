@@ -3,10 +3,12 @@ import { ReactComponent as Edit } from "../../assets/icon/Path.svg"
 import { ReactComponent as Deletebtn } from "../../assets/icon/trash-2.svg"
 import { Restore, Container } from './styled'
 import { MyContext } from '../../context/ProductsContext'
+
 const FastFood = () => {
     const [active] = useState(null)
     const [mydata, setData] = useContext(MyContext)
     const [data] = useState(mydata)
+
 
     const Delete = (id) => {
         let NewData = mydata.filter((value) => value.id !== id)
@@ -16,7 +18,8 @@ const FastFood = () => {
         setData(data)
     }
     return (
-        <Container>
+        <Container >
+
             {
                 mydata.length ?
                     mydata.map((value) => (

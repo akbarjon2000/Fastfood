@@ -20,16 +20,16 @@ export const Root = () => {
                         <CategoryContext>
                             <ProductsContext>
                                 <OrdersContex>
-                                    {/* <Location></Location> */}
+                                    <Location></Location>
                                     <Sidebar />
-                                    <Routes>
+                                    {/* <Routes>
                                         {
                                             sidebar.map(({ id, pathname, component: Element }) => (
                                                 <Route key={id} path={pathname} element={<Element />} />
                                             ))
                                         }
                                         <Route path="*" element={<h1>404 Not Found</h1>} />
-                                    </Routes>
+                                    </Routes> */}
                                 </OrdersContex>
                             </ProductsContext>
                         </CategoryContext>

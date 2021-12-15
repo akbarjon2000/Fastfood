@@ -6,9 +6,9 @@ const libraries = ['places']
 const Index = ({ location }) => {
     const { REACT_APP_MAP_KEY: mapKey } = process.env;
     const { isLoaded } = useJsApiLoader({
-        googleMapsApiKey: mapKey,
+        // googleMapsApiKey: mapKey,
         id: "fastfood",
-        // googleMapsApiKey: "AIzaSyDdW7LC6CV - BDiegWcKiyeLoCKFx1uQ4kM",
+        googleMapsApiKey: "AIzaSyD2fbm-0vqUfRB-L7NO8BiqBtk2IyYg38g",
         libraries
     })
 
