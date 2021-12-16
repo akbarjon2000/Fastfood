@@ -4,9 +4,9 @@ import { useLocation } from 'react-router-dom';
 import { Container } from './style'
 import { ReactComponent as Filter } from "./filter.svg"
 import { ReactComponent as Search } from "./search.svg"
+import { ReactComponent as Upload } from "../../../assets/icon/upload-cloud.svg"
 import { MyContext } from '../../../context/ProductsContext'
 import GenericDrawer from "../../Generic Drawer"
-
 const Navbar = () => {
     const [mydata, setData] = useContext(MyContext)
     const [data] = useState(mydata);
@@ -37,7 +37,15 @@ const Navbar = () => {
                             <option>Lavash</option>
                             <option>Drinks</option>
                         </select>
+                        <p className='name'>Cost</p>
+                        <input type="text" className='input'></input>
+                        <p className='name'>Additional Info</p>
+                        <input type="text" className='input'></input>
+                        <input id='upload' type="image" className='upload' />
+                        <label htmlFor='upload'>
 
+                            Upload Product Image
+                        </label>
                     </form>
                 </AddContainer>
             </GenericDrawer>

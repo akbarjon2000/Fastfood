@@ -3,7 +3,7 @@ import { Container } from './style';
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom"
 import { sidebar } from "../utils/sidebar"
 import Sidebar from '../components/Sidebar';
-import Location from "../components/branches/location"
+
 //Contexts:
 import { OrdersContex } from '../context/OrdersContex';
 import ProductsContext from "../context/ProductsContext";
@@ -20,16 +20,15 @@ export const Root = () => {
                         <CategoryContext>
                             <ProductsContext>
                                 <OrdersContex>
-                                    <Location></Location>
                                     <Sidebar />
-                                    {/* <Routes>
+                                    <Routes>
                                         {
                                             sidebar.map(({ id, pathname, component: Element }) => (
                                                 <Route key={id} path={pathname} element={<Element />} />
                                             ))
                                         }
                                         <Route path="*" element={<h1>404 Not Found</h1>} />
-                                    </Routes> */}
+                                    </Routes>
                                 </OrdersContex>
                             </ProductsContext>
                         </CategoryContext>

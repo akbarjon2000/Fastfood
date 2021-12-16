@@ -124,6 +124,17 @@ align-items:center;
 justify-content:center;
 margin-top:5px;
 }
+.save{
+    outline:none;
+    border:none;
+    background: #20D472;
+border-radius: 4px;
+width :118px;
+height: 35px;
+color:white;
+margin-top:20px;
+cursor:pointer;
+}
 `
 Container.Item = styled.div`
 list-style:none;
@@ -187,6 +198,7 @@ border-radius: 4px;
 display:flex;
 align-items:center;
 justify-content:center;
+cursor: pointer;
 }
 .countMenu{
     display:flex;
@@ -204,6 +216,8 @@ justify-content:space-around;
     background-color:white;
     font-size:25px;
     font-weight:400;
+cursor: pointer;
+
 }
 .plus{
     border:none;
@@ -211,6 +225,7 @@ justify-content:space-around;
     background-color:white;
     font-size:25px;
     font-weight:400;
+cursor: pointer;
 }
 
 `

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-
 import { Wrapper } from "./style";
 import { ReactComponent as Active } from "../../assets/icon/check-circle.svg"
 import { ReactComponent as Block } from "../../assets/icon/block.svg"
@@ -10,11 +9,7 @@ export const BodyCopy = ({ onDelete, item, data }) => {
 
     const [active, setActive] = useState(true)
     const activate = (id) => {
-        data.map((value) => {
-            if (value.id === id) {
-                setActive(!active)
-            }
-        })
+        data.map(value => { if (value.id === id) { setActive(!active) } })
     }
 
     return (

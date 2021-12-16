@@ -2,7 +2,9 @@ import styled from "styled-components"
 
 export const Container = styled.div`
 .map{
-    width:1000px;
-    height:800px;
+    width:270px;
+    height:140px;
+    border-radius:8px;
+    margin-top:10px;
 }
 `

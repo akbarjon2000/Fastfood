@@ -8,7 +8,8 @@ import GenericDrawer from "../../Generic Drawer"
 import { Container, DeleteStyle } from './AddNewStyle'
 import { data } from '../../../utils/AddNewUtils/garnierObj'
 import { AddNew } from './AddNew'
-
+import Location from "../location"
+import { nanoid } from "nanoid"
 //ICONS
 import { ReactComponent as Delete } from "../../../assets/icon/trash-2.svg"
 import { ReactComponent as UserPlus } from "../../../assets/icon/user-plus.svg"
@@ -16,7 +17,7 @@ import { ReactComponent as UserPlus } from "../../../assets/icon/user-plus.svg"
 
 const OrdersNav = () => {
     const [isActive, setActive] = useState('New');
-    const [menu, setMenu] = useState("Burger")
+    const [menu, setMenu] = useState("Garnier")
 
     const [show, setShow] = useState(false);
     const [open, setOpen] = useState(false)
@@ -26,9 +27,11 @@ const OrdersNav = () => {
     }
     const toggle1 = () => {
         setShow(false)
+        setOpen(false)
     }
     const toggle2 = () => {
         setShow(true)
+        setOpen(false)
     }
     return (
         <PageContainer >
@@ -79,8 +82,8 @@ const OrdersNav = () => {
                     <Card />
                     : <Grid isActive={isActive} />
                 }
-                <GenericDrawer onClose={onClose} open={open} width="810px" >
-                    <Container>
+                <GenericDrawer onClose={onClose} open={open} width="810px" key={nanoid(3)}>
+                    <Container key={nanoid(3)}>
                         <div className='left'>
                             <h1 className='title'>Add New Order</h1>
                             <div className='toggle'>
@@ -107,7 +110,7 @@ const OrdersNav = () => {
                                 menu === "Garnier" ?
                                     <div className='manuContainer'>
                                         {data.map((value) => (
-                                            <AddNew value={value} />
+                                            <AddNew value={value} key={nanoid(3)} />
                                         ))}
                                     </div>
 
@@ -153,7 +156,9 @@ const OrdersNav = () => {
                                 <p style={{ marginTop: "16px" }}>Phone number</p>
                                 <input className='input ' type="text" required></input>
                                 <p style={{ marginTop: "16px" }}>Location</p>
-                                <input className='input ' type="text" required></input>
+
+                                <Location />
+                                <button className='save'>Save</button>
                             </form>
                         </div>
                     </Container>

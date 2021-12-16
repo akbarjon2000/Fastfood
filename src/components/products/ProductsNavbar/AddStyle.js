@@ -31,6 +31,11 @@ border-radius: 6px;
 width:318px;
 height:44px;
 margin-bottom:16px;
+outline:unset;
+}
+.upload{
+display:none;
+
 }
 
 `
