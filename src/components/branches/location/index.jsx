@@ -8,7 +8,7 @@ const Index = ({ location }) => {
     const { isLoaded } = useJsApiLoader({
         // googleMapsApiKey: mapKey,
         id: "fastfood",
-        googleMapsApiKey: "AIzaSyDJ2bvspTCTziOPvae3B8zSOCae2Dvz8iw",
+        googleMapsApiKey: "AIzaSyBg33f-iEoZaA1wEVVqKiPquhdWacg3Dh0",
         libraries
     })
     const [place, setPlace] = useState(null);

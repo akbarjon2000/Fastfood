@@ -48,7 +48,7 @@ const Navbar = () => {
                         <input id='upload' type="file" accept='image/*' className='upload' onChange={(e) => onUpload(e)} required />
 
 
-                        <label for='upload' className='label' >
+                        <label htmlFor='upload' className='label' >
                             <Upload />
                             {img ? <img src={img} />
                                 : <p style={{ opacity: "0.6", marginTop: "10px" }}>Upload Product Image</p>

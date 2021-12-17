@@ -15,6 +15,7 @@ import Products from "../components/products/Products"
 import Category from "../components/category/Category"
 import Branches from "../components/branches"
 import Customers from "../components/customers"
+import { Notification as Catalog } from "../components/catalog"
 export const sidebar = [
     {
         id: 1,
@@ -64,6 +65,15 @@ export const sidebar = [
         pathname: "/Report",
         child: [],
         component: Generic,
+        hidden: false,
+        icon: report,
+    },
+    {
+        id: 7,
+        title: "Catalog",
+        pathname: "/Catalog",
+        child: [],
+        component: Catalog,
         hidden: false,
         icon: report,
     },

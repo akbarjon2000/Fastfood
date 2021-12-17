@@ -1,26 +1,25 @@
 import styled from "styled-components";
-
 export const ContainerAdd = styled.div`
 padding:44px 24px;
 .title{
     font-family: SFProDisplay;
 font-size: 16px;
 line-height: 18px;
-/* identical to box height, or 112% */
-margin-bottom:32px;
 letter-spacing: 0.533333px;
 font-weight:600;
 color: #2D3A45;
+margin-bottom:32px;
+
 }
 .text{
-    font-family: SFProDisplay;
+font-family: SFProDisplay;
 font-size: 12px;
 line-height: 18px;
-/* identical to box height, or 150% */
-margin-bottom:5px;
 letter-spacing: 0.4px;
-opacity:0.6;
 color: #2D3A45;
+mix-blend-mode: normal;
+opacity: 0.6;
+margin-bottom:5px;
 }
 .input{
     border: 1px solid #EDEFF3;
@@ -32,7 +31,20 @@ margin-bottom:16px;
 outline:none;
 padding:10px
 }
-
+.timeDiv{
+    display:flex;
+    align-items:center;
+    
+}
+.timeInput{
+    border: 1px solid #EDEFF3;
+box-sizing: border-box;
+border-radius: 6px;
+width:95px;
+height:50px;
+outline:none;
+margin-bottom:16px;
+}
 .savebtn{
     background: #20D472;
 border-radius: 4px;
@@ -41,7 +53,6 @@ width:118px;
 height:35px;
 outline:none;
 border:none;
-margin-top:424px;
+margin-top:200px;
 }
-
 `

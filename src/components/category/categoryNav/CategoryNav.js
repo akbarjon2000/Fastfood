@@ -8,7 +8,7 @@ import { ContainerAdd } from './AddStyle'
 const Navbar = () => {
     const [mydata, setData] = useContext(MyCategory)
     const [data] = useState(mydata);
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
     const onClose = () => {
         setOpen(false)
     }
