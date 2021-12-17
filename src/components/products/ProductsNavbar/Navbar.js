@@ -11,6 +11,7 @@ const Navbar = () => {
     const [mydata, setData] = useContext(MyContext)
     const [data] = useState(mydata);
     const [open, setOpen] = useState(false);
+    const [img, setImg] = useState(null)
     const onClose = () => {
         setOpen(false)
     }
@@ -21,32 +22,41 @@ const Navbar = () => {
     }
     const location = useLocation();
     const length = location.pathname.split('').length
+    const onUpload = (e) => {
+        console.log(e)
+        setImg(e.target.value)
+    }
     return (
         <>
             <GenericDrawer width="366px" open={open} onClose={onClose} >
                 <AddContainer >
-
                     <p className='title'>Add new product</p>
-                    <form>
+                    <form name='products' id='products'>
 
                         <p className='name' >Name of the product</p>
-                        <input type="text" name="name" id="name" className='input' />
+                        <input type="text" name="name" id="name" className='input' required />
                         <p className='name'>Category</p>
-                        <select name="name" id="name" className='input' >
+                        <select name="name" id="name" className='input' required >
                             <option>Burger</option>
                             <option>Lavash</option>
                             <option>Drinks</option>
                         </select>
                         <p className='name'>Cost</p>
-                        <input type="text" className='input'></input>
+                        <input type="text" className='input' required ></input>
                         <p className='name'>Additional Info</p>
-                        <input type="text" className='input'></input>
-                        <input id='upload' type="image" className='upload' />
-                        <label htmlFor='upload'>
+                        <input type="text" className='input' required></input>
+                        <input id='upload' type="file" accept='image/*' className='upload' onChange={(e) => onUpload(e)} required />
 
-                            Upload Product Image
+
+                        <label for='upload' className='label' >
+                            <Upload />
+                            {img ? <img src={img} />
+                                : <p style={{ opacity: "0.6", marginTop: "10px" }}>Upload Product Image</p>
+                            }
                         </label>
+
                     </form>
+                    <button className='savebtn' type='submit' form='products' onClick={(e) => console.log(e)} >Save</button>
                 </AddContainer>
             </GenericDrawer>
             <Container>

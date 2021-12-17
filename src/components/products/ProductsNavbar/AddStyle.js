@@ -34,8 +34,30 @@ margin-bottom:16px;
 outline:unset;
 }
 .upload{
-display:none;
-
+${'' /* display:none; */}
+width:318px;
+height:97px;
 }
 
+.label{
+    width:318px;
+    height:97px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+border:1px dashed #EDEFF3 ;
+border-radius: 8px;
+
+}
+.savebtn{
+    background: #20D472;
+border-radius: 4px;
+width:118px;
+height:35px;
+border:none;
+outline:unset;
+color:white;
+margin-top:150px;
+}
 `
