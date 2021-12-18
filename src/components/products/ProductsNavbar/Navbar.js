@@ -50,7 +50,7 @@ const Navbar = () => {
 
                         <label htmlFor='upload' className='label' >
                             <Upload />
-                            {img ? <img src={img} />
+                            {img ? <img src={img} alt='alter' />
                                 : <p style={{ opacity: "0.6", marginTop: "10px" }}>Upload Product Image</p>
                             }
                         </label>
