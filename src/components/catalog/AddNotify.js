@@ -1,7 +1,8 @@
 import React from 'react'
 import { AddContainer } from './AddStyle'
+import { MyCatalogContext } from "../../context/catalogContext"
 import { ReactComponent as Upload } from "../../assets/icon/upload-cloud.svg"
-// import { obj } from '../../utils/notifyObj'
+
 export const AddNotify = ({ onNotify }) => {
     const onSave = (e) => {
         e.preventDefault()

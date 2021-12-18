@@ -10,6 +10,8 @@ import ProductsContext from "../context/ProductsContext";
 import CategoryContext from '../context/CategoryContext';
 import BranchContex from '../context/branchContex';
 import { CustomersContext } from '../context/CustomersContext';
+import CatalogContex from '../context/catalogContext';
+
 
 export const Root = () => {
     return (
@@ -20,15 +22,17 @@ export const Root = () => {
                         <CategoryContext>
                             <ProductsContext>
                                 <OrdersContex>
-                                    <Sidebar />
-                                    <Routes>
-                                        {
-                                            sidebar.map(({ id, pathname, component: Element }) => (
-                                                <Route key={id} path={pathname} element={<Element />} />
-                                            ))
-                                        }
-                                        <Route path="*" element={<h1>404 Not Found</h1>} />
-                                    </Routes>
+                                    <CatalogContex>
+                                        <Sidebar />
+                                        <Routes>
+                                            {
+                                                sidebar.map(({ id, pathname, component: Element }) => (
+                                                    <Route key={id} path={pathname} element={<Element />} />
+                                                ))
+                                            }
+                                            <Route path="*" element={<h1>404 Not Found</h1>} />
+                                        </Routes>
+                                    </CatalogContex>
                                 </OrdersContex>
                             </ProductsContext>
                         </CategoryContext>
