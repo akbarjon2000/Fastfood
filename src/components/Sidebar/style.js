@@ -5,6 +5,7 @@ display:flex;
 flex-direction:column;
 width:300px;
 height:100vh;
+min-height: 800px;
 background-color:white;
 .icon{
     width:40px;
