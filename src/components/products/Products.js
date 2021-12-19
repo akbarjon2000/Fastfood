@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import Navbar from "./ProductsNavbar/Navbar"
 import FastFood from "./fastFood";
-import { Container } from "./styled";
+import { Base } from "./styled";
 export default class Products extends Component {
   render() {
     return (
-      <Container>
+      <Base>
         <Navbar />
         <FastFood className="menu" />
-        <div className="addd">Add More</div>
-      </Container>
+      </Base>
     )
   }
 }

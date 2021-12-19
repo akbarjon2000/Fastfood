@@ -37,6 +37,7 @@ const FastFood = () => {
                     ))
                     : <Restore onClick={Reset} className='heartbeat'><i class="fa-solid fa-trash-arrow-up  "></i> Restore</Restore>
             }
+            <div className="addd">Add More</div>
         </Container>
     )
 }

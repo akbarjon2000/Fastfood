@@ -1,5 +1,8 @@
 import styled from "styled-components"
 export const Container = styled.div`
+${'' /* position:sticky;
+top:0;
+overflow:auto; */}
 .nobody {
   display: flex;
   flex-direction: column;

@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const Container = styled.div`    
 height:100vh;
-overflow-y:auto;
+
 .base {
   display: flex;
   flex-direction: row;
@@ -88,10 +88,8 @@ overflow-y:auto;
   justify-content: center;
   font-size: 13px;
   font-family: "Montserrat", sans-serif;
+  cursor: pointer;
 }
-/* .sidebarborder {
-  border-left: 30px solid;
-} */
 .delete-true {
   display: none;
 }
@@ -167,7 +165,10 @@ overflow-y:auto;
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
+}
 `
+
+
 export const Restore = styled.button`
 width:992px;
 height:60px;
@@ -183,4 +184,8 @@ background-color:orange;
     box-shadow: 0px 5px 15px #B0B1B56E;
     cursor:pointer;
 }
+`
+export const Base = styled.div`
+height:100vh;
+
 `
