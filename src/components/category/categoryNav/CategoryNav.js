@@ -57,7 +57,7 @@ const Navbar = () => {
                                 position: "relative",
                                 bottom: "2px"
                             }}>+</div></div>
-                            <p style={{ width: "100px" }}>Add a new product</p>
+                            <p style={{ width: "100px" }}>Add a new Category</p>
                         </div>
                         <div className='searchbar'>
                             <div>

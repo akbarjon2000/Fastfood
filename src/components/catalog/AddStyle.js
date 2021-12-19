@@ -9,6 +9,7 @@ border-radius: 12px;
 display:flex;
 flex-direction:column;
 padding:30px;
+overflow:hidden !important;
 .title{
     background: #EDEFF3;
 border-radius: 25px;
@@ -82,7 +83,10 @@ border-radius: 20px;
 width: 170px;
 height: 40px;
 background: #FFFFFF;
-outline:none;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor: pointer;
 
 }
 .save{
@@ -94,5 +98,9 @@ color:white;
 border:none;
 outline:none;
 margin-left:20px;
+cursor: pointer;
+}
+#myForm{
+    ${'' /* overflow:hidden; */}
 }
 `

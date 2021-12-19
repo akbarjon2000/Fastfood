@@ -50,12 +50,13 @@ export const Container = styled.div`
   background-color: white;
   display: flex;
   flex-direction: row;
+  align-items:center;
+
 }
 .searchInput {
   width: 300px;
   height: 48px;
   margin-left: 48px;
-  margin-top: 16px;
   border-radius: 24px;
   background-color: #edeff3;
   border: unset;
@@ -76,12 +77,11 @@ export const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 15px;
   margin-left: 10px;
   border-radius: 50%;
   border: 7px solid #edeff3;
-  width: 36px;
-  height: 36px;
+  width: 46px;
+  height: 46px;
 }
 .categories {
   display: flex;
