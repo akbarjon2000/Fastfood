@@ -22,7 +22,6 @@ height:850px;
 background-color:white;
 z-index:999;
 transition: all 0.5s;
-border:1px solid red;
 margin:0;
 
 /* padding:40px; */

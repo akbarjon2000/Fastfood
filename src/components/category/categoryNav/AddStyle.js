@@ -43,5 +43,14 @@ outline:none;
 border:none;
 margin-top:424px;
 }
+.select{
+    border: 1px solid #EDEFF3;
+    border-bottom-right-radius:6px;
+    border-top-right-radius:6px;
+box-sizing: border-box;
+width:274px;
+height:44px;
+outline:none;
+}
 
 `

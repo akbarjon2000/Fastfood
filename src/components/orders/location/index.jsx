@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
-import { GoogleMap, useJsApiLoader, Marker, Autocomplete } from "@react-google-maps/api"
+import { GoogleMap, Marker, Autocomplete } from "@react-google-maps/api"
 import { Container } from './style';
-
+import { Loader } from '@googlemaps/js-api-loader';
 const libraries = ['places']
 const Index = ({ location }) => {
-    // const { REACT_APP_MAP_KEY: mapKey } = process.env;
-    const { isLoaded } = useJsApiLoader({
-        // googleMapsApiKey: mapKey,
+    const { REACT_APP_MAP_KEY: mapKey } = process.env;
+    const loader = new Loader({
+        googleMapsApiKey: mapKey,
         id: "fastfood",
-        googleMapsApiKey: "AIzaSyBg33f-iEoZaA1wEVVqKiPquhdWacg3Dh0",
+        // googleMapsApiKey: "AIzaSyDJ2bvspTCTziOPvae3B8zSOCae2Dvz8iw",
         libraries
     })
     const [place, setPlace] = useState(null);
@@ -35,7 +35,7 @@ const Index = ({ location }) => {
                     borderRadius: "6px"
                 }} />
             </Autocomplete>
-            {isLoaded && (
+            {loader && (
                 <GoogleMap
                     id='fastfood'
                     zoom={12}

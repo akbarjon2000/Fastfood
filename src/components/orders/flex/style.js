@@ -80,8 +80,13 @@ flex-direction:column;
 
 //DRAWER
 export const Container2 = styled.div`
+.buttonsDiv{
+  display:flex;
+  align-items:center;
+  margin-top:100px;
+}
 .x {
-  width: 50px;
+  width: 50px !important;
   height: 50px;
   border: 5px solid rgba(237, 239, 243, 1);
   display: flex;
@@ -90,7 +95,11 @@ export const Container2 = styled.div`
   border-radius: 50%;
   background-color: white;
   cursor:pointer;
-  margin-right:30px;
+  margin:0;
+  padding:0;
+  margin-right:60px;
+
+  ${'' /* margin-right:30px; */}
 }
 .tick {
   width: 50px;
@@ -102,7 +111,9 @@ export const Container2 = styled.div`
   border-radius: 50%;
   background-color: white;
   cursor:pointer;
-  
+  margin:0;
+  padding:0;
+
 }
 `
 Container2.Col1 = styled.div`

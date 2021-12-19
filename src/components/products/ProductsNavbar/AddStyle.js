@@ -34,7 +34,7 @@ margin-bottom:16px;
 outline:unset;
 }
 .upload{
-${'' /* display:none; */}
+display:none;
 width:318px;
 height:97px;
 }
@@ -58,6 +58,6 @@ height:35px;
 border:none;
 outline:unset;
 color:white;
-margin-top:150px;
+margin-top:250px;
 }
 `

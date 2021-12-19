@@ -114,14 +114,14 @@ const Grid = ({ isActive }) => {
                                         </div>
                                     </div>
                                 </Container2.Total>
-                                <div style={{ display: "flex", marginTop: "35px", marginLeft: "40px" }}>
+                                <div className='buttonsDiv'>
                                     <div className='x' onClick={onClose}>
 
-                                        <X />
+                                        <X style={{ margin: "0", padding: "0" }} />
                                     </div >
                                     <div className='tick' onClick={setClose}>
 
-                                        <Tick />
+                                        <Tick style={{ margin: "0", padding: "0" }} />
                                     </div>
                                 </div>
                             </Container2>
@@ -243,7 +243,8 @@ const Grid = ({ isActive }) => {
                             <div className='x'
                                 onClick={() => onDelete(item.id)}
                             >
-                                <X /></div>
+                                <X />
+                            </div>
                             <div className='tick' onClick={() => setOpen(true)}><Tick /></div>
                         </Container.Four>
                     </Wrapper>

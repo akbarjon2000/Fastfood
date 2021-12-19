@@ -23,7 +23,7 @@ const Navbar = () => {
                 <ContainerAdd>
 
                     <p className='title'>Add New Category</p>
-                    <form>
+                    <form action='' >
 
                         <p className='text' >Category name uz</p>
                         <input type="text" className='input' />

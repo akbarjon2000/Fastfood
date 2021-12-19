@@ -9,7 +9,9 @@ export const BodyCopy = ({ onDelete, item, data }) => {
 
     const [active, setActive] = useState(true)
     const activate = (id) => {
-        data.map(value => { if (value.id === id) { setActive(!active) } })
+        data.map(value => {
+            return value.id === id && setActive(!active)
+        })
     }
 
     return (
